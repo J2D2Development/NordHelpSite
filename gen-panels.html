@@ -1,0 +1,123 @@
+<section>
+	<div class = 'leftMenu'>
+		<div class = 'leftMenuHeadline'>
+			<em>You are viewing the guide to working with the General tab<br />
+			<br />
+			Click any tag below to see more info</em>
+			<br />
+			<br />
+		</div>
+			<a href ng-click = 'genpanel.selectTab(0, "Homes Info")'>
+				<li ng-class = "{active:genpanel.isSelected(0)}">
+					Homes Info
+				</li>
+			</a>
+			<a href ng-click = 'genpanel.selectTab(1, "Data Export")'>
+				<li ng-class = "{active:genpanel.isSelected(1)}">
+					Data Export
+				</li>
+			</a>
+			<a href ng-click = 'genpanel.selectTab(2, "User Request Properties")'>
+				<li ng-class = "{active:genpanel.isSelected(2)}">
+					User Requests
+				</li>
+			</a>
+			<a href ng-click = 'genpanel.selectTab(3, "Audit Log")'>
+				<li ng-class = "{active: genpanel.isSelected(3)}">
+					Audit Log
+				</li>
+			</a>
+			<a href ng-click = 'genpanel.selectTab(4, "Page Search")'>
+				<li ng-class = "{active:genpanel.isSelected(4)}">
+					Page Search
+				</li>
+			</a>
+			<a href ng-click = 'genpanel.selectTab(5, "Footer")'>
+				<li ng-class = "{active: genpanel.isSelected(5)}">
+					Footer
+				</li>
+			</a>
+			<a href ng-click = 'genpanel.selectTab(6, "Meta Tags")'>
+				<li ng-class = "{active: genpanel.isSelected(6)}">
+					Meta Tags
+				</li>
+			</a>
+			<a href = 'helpHome.php'>
+				<li>Home</li>
+			</a>
+	</div>
+	<div class = 'mainContent'>
+		<h1>Working with General Tab: {{genpanel.msg}}</h1>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(0)'>
+		This guide explains the General section of the administrator’s panel which provides access to several useful tools and controls several high-level features.
+		<img src = 'HelpImages/GeneralSection/generalTop.jpg' alt = 'Top of General Screen' />
+		Access the General section by selecting the “General” button on the main admin panel. There are several sections on the General screen, the first handles general homes info.
+		<img src = 'HelpImages/GeneralSection/generalHomes.jpg' alt = 'Home Properties - General' />
+		This information was set up for you when you signed up for the site and there is generally nothing that you need to update here. If you spot an error, you may correct it, of course, by selecting the “Edit” link next to the Address or the Number of Homes.
+	</div>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(1)'>
+		<img src = 'HelpImages/GeneralSection/dataexport.jpg' alt = 'Data Export Screen 1' />
+		The Data Export tools allow you to download information from the site for off-line usage. You can download information for use as mailing labels, property/home records, and/or resident roster information (all the information). When you select “run tool” you will see a screen similar to the one shown below.
+		<img src = 'HelpImages/GeneralSection/dataexport2.jpg' alt = 'Data Export Screen 2' />
+		Selection of <strong>Directory</strong> records will create a file of information from your resident’s directory. Since it contains all the information in the directory, it can be useful for many purposes.<br />
+		<br />
+		Selection of <strong>Users</strong> records will create a file of information from your user records. This is a useful record for identifying everyone who has access to the site whether they are associated with a Home in the community or not.<br />
+		<br />
+		Selection of <strong>Residents</strong> records will create a file of information from your directory. It cycles through the directory and pulls the first resident in each record for the name. It gets the address from the Home record and the city, state and zip from the general record. It can be very useful if there are many unsold or vacant properties.<br />
+		<br />
+		Selection of <strong>Homes</strong> records allows you to create a mailing label file with a unique “name.” The information comes from the Homes record (street address) and the General record (city, state, and zip).<br />
+		<br />
+		When you have finished making your selection, you will see a screen similar to the one shown below. If you are using MS Internet Explorer, you must choose “save” rather than “open” when you click the “download as a CSV file” link. CSV (comma separated values) is a common format for database records. Excel will open the downloaded file and you can save it as a standard Excel file for future use. Many mail merge programs can read a CSV file directly. We suggest you try each of the options (mailing, home, roster) to decide which best suits your needs.
+		<img src = 'HelpImages/GeneralSection/dataexport3.jpg' alt = 'Data Export Screen 3' />
+	</div>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(2)'>
+		<img src = 'HelpImages/GeneralSection/userrequestproperties.jpg' alt = 'User request form controls' />
+		Check/Uncheck the 'CC Manual User Creation Notifications to this user' box to toggle the feature that will copy the Users admin on any user account notifications. This can be useful if a user doesn't receive their credentials when their account is processed (as it will narrow down the issue to something with their email account settings).<br />
+		<img src = 'HelpImages/GeneralSection/userrequestform.jpg' alt = 'User request form edit' />
+		In addition to the standard text that is displayed on the User ID request form, you can add your own Association specific text. The text shows up on the form under the standard text and above the entry fields. Note you can also designate a Feature administrator for user ids in this section. You simply select the administrator from the drop down list of available feature administrators (their user records must be marked for feature administration).<br />
+		<br />
+		If you want to customize the text that is sent in the email delivered when creating new user accounts (notifying the user of their credentials), just type the text into the "New User Notification" field and save.If you want to go back to the default notification message, just delete your text from this area.<br />
+		<br />
+		If the Request Forms feature is available to you (extended package only), you have another option.
+		<img src = 'HelpImages/GeneralSection/userselectform.jpg' alt = 'User request form select screen 1' />
+		You can create your own form and use it instead of the default form. Be sure to define the form with the user authentication set to “N” either at the feature level or at the form level. Once the form has been created, click on “Select Form” and a screen similar to the one shown below will be displayed. Simply choose your custom form from the drop down and select “Save.”
+		<img src = 'HelpImages/GeneralSection/userselectform2.jpg' alt = 'User request form select screen 2' />
+		<em>Please note: By definition a user id request form must not require user authentication.</em>
+	</div>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(3)'>
+		<img src = 'HelpImages/GeneralSection/auditLog.jpg' alt = 'Audit Log Link' />
+		The system automatically logs all significant events in a log that you can view. A sample log is displayed below.
+		<img src = 'HelpImages/GeneralSection/auditlog2.jpg' alt = 'Audit Log View' />
+		Over time, there will be thousands of entries in the log, so scrolling to locate a particular entry can be cumbersome. You can search for specific log events by entering a date in the format of YYYYMMDD, or one of the “Module” types shown in the Module column.<br />
+		<br />If you wanted to see which users logged in on a particular day, enter “User View” in the search field and then scroll to the day in question.
+	</div>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(4)'>
+		<img src="HelpImages/GeneralSection/pagesearchlink.jpg" alt="Page Search Link" />
+		Page Search is a feature that adds a search box to the top of each page on your site. Users can enter text and the system will display any pages with matching text. We suggest you try the option before deciding whether to include it permanently on your site or not. To activate the option, select “Edit” and you will see a screen similar to the one shown below.
+		<img src="HelpImages/GeneralSection/pagesearch.jpg" alt="Page Search Enable" />
+	</div>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(5)'>
+		<img src="HelpImages/GeneralSection/footerlink.jpg" alt="Footer Link" />
+		To add a footer, select “Edit” next to the Footer option and you will see a screen similar to the one shown below. Any information entered here will be displayed on every page of the site – at the bottom (the footer). You can use this area to call attention to special events (meeting, get-togethers, etc.), holiday messages, or even advertising. To remove a footer, simply remove the text.
+		<img src="HelpImages/GeneralSection/footer.jpg" alt="Footer Entry Area" />
+		The footer entry form is identical to the Page Area form. The full power of the page area editor is available to you to use in this field, including the image and linking ability.<br />
+		<br />
+		You can, as an example, include a link to an email address, a link to another page on the site, a link to a feature on your site, or a link to an external site.<br />
+		<br />
+		For a detailed explanation of the page area editor, go to the <a href = 'helpPages.php'>Pages Section</a> of this guide.
+	</div>
+	<div class = 'panel' ng-show = 'genpanel.isSelected(6)'>
+		<img src="HelpImages/GeneralSection/metatagslink.jpg" alt="Meta Tags Link" />
+		Some Internet search engines use keywords and a description of a web site to help determine which sites to display when a user searches. These keywords are referred to as “Meta Tags.” If you would like to add your own keywords and description to your site, select “Edit” next to Meta Tags and a screen similar to one shown below will be displayed.
+		<img src="HelpImages/GeneralSection/metatags.jpg" alt="Meta Tag Entry" />
+		<strong>Site Title</strong> - Enter the title of your site, like “Template Estates Homeowners Web Site.” The title will appear in your site visitor’s browser title bar. The Site Title is not technically a “meta tag” but is useful in controlling what the browser displays.<br />
+		<br />
+		<strong>Site Description</strong> - Enter a brief description of your site. This information may be read by some search engines and used to help index the site.<br />
+		<br />
+		<strong>Keywords</strong> - These are unique words or phrases that identify the content of your site. Enter as many as you want separated by commas. You could enter, for example, “template, template estates, template estates homeowners association, city, state, county, new home for sale,” etc.<br />
+		<br />
+		When you are finished, select “Save.”<br />
+		<br />
+		It is important to note that some search engines (Google, for example) ignore Meta Tags and index sites with their own, proprietary methodology. You can submit your site to Google (and others) or just wait, they will find it eventually. Many search engines, however, still take meta tags into consideration when delivering results. Techniques have also been developed to penalize web sites considered to be "cheating the system". For example, a web site repeating the same meta keyword several times may have its ranking decreased by some search engines.
+	</div>
+</section>

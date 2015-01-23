@@ -1,0 +1,134 @@
+<section>
+	<div class = 'leftMenu'>
+		<div class = 'leftMenuHeadline'>
+			<em>You are viewing the guide to working with Images<br />
+			<br />
+			Click any tag below to see more info</em>
+			<br />
+			<br />
+		</div>
+			<a name = 'general' href ng-click = 'imgpanel.selectTab(0, "General")'>
+				<li ng-class = "{active:imgpanel.isSelected(0)}">
+					General
+				</li>
+			</a>
+			<a href ng-click = 'imgpanel.selectTab(1, "Basic Configuration")'>
+				<li ng-class = "{active:imgpanel.isSelected(1)}">
+					Configuration
+				</li>
+			</a>
+			<a href ng-click = 'imgpanel.selectTab(2, "Automatic Sizing Options")'>
+				<li ng-class = "{active:imgpanel.isSelected(2)}">
+					Sizing
+				</li>
+			</a>
+			<a href ng-click = 'imgpanel.selectTab(3, "Uploading an Image")'>
+				<li ng-class = "{active: imgpanel.isSelected(3)}">
+					Upload
+				</li>
+			</a>
+			<a href ng-click = 'imgpanel.selectTab(4, "Deleting/Replacing Images")'>
+				<li ng-class = "{active:imgpanel.isSelected(4)}">
+					Delete
+				</li>
+			</a>
+			<a href ng-click = 'imgpanel.selectTab(5, "Preparing Images for Upload")'>
+				<li ng-class = "{active: imgpanel.isSelected(5)}">
+					Prep
+				</li>
+			</a>
+			<a href = 'helpHome.php'>
+				<li>Home</li>
+			</a>
+	</div>
+	<div class = 'mainContent'>
+		<h1>Working with Images: {{imgpanel.msg}}</h1>
+	<div class = 'panel' ng-show = 'imgpanel.isSelected(0)'>
+		<img src="HelpImages/Pictures/pictureslinks.jpg" alt="Main Pictures Link" />
+		All of the images you will use on your site are stored in one location, the picture folder. Images must be uploaded from a local PC to the picture folder before they are available for use on the site. Images can be uploaded by the system administrator, a feature administrator, or site visitors – depending on how you configure the feature.<br />
+		<br />
+		Images can be photos, graphics, or clip art and may be uploaded in .JPG, .PNG, or .GIF formats.<br />
+		<br />
+		Like other Features, you can create a button or embedded text link that goes to the Pictures folder. This is useful if you want page or feature administrators to have access to the picture folder.
+	</div>
+	<div class = 'panel' ng-show = 'imgpanel.isSelected(1)'>
+		To set up the options for your images, select the Features tab in the main menu, then “edit” next to “Pictures” on the feature menu. You will see a screen similar to this
+		<img src="HelpImages/Pictures/picturesedit.jpg" alt="Pictures Edit Screen" />
+		<strong>Site Title:</strong> If you prefer to name Pictures something other than the default “Pictures” you can change the name here. This is the title that will be displayed when the feature is accessed by someone uploading an image.<br />
+		<br />
+		<strong>Feature Admin:</strong> Selecting a feature administrator from the drop list of your available feature administrators allows you to share the image maintenance duties with someone else. Use the drop-down menu to display a list of feature administrators (Their user records are marked as Feature Administrators).<br />
+		<br />
+		<strong>Categories:</strong> You can create categories to organize and sort your uploaded images. This works just like with the document feature- just type your category titles into the text box (one per line) and save when you're ready. Those categories will then be available when uploading/editing images in the 'manage' tab. This organization is very useful if you end up with a large number of images on your site<br />
+		<br />
+		<strong>Require User Authentication:</strong> If you want only logged in users to be able to view the picture lists, select “yes.” Otherwise, select “no.”<br />
+		<br />
+		<strong>Allow User Submissions:</strong> If you would like your site visitors to be able to submit their own images, select “yes.” Otherwise, select “no.” You must have a feature administrator for this option to work correctly. Once set up, a “submit” button will appear on user screens with the authority to upload images and “manage” button will appear of user screens with the authority to manage (approve, delete, etc.) images. If you want to allow users to upload their own images, we suggest that you set up the “Sizing” options discussed in the Sizing tag at left.<br />
+		<br />
+		<strong>Automatically Accept User Submissions:</strong> Assuming you allow submissions (above), you can control whether those submissions are automatically added to the picture folder (“yes”) or require review and approval before appearing in the folder (“no”). If you select no, an email will be sent to the feature administrator when a photo has been uploaded notifying them of the need to approve it.<br />
+		<br />
+		<strong>Require User Authentication for Submissions:</strong> If you have enabled “user submissions” and want only logged in users to be able to submit images, select “yes.” Otherwise, select “no.”<br />
+		<br />
+		<em>Note: If you've subscribed to our extended package and have access to the User Groups feature, you will be able to assign certain user groups access to manage this feature</em>
+	</div>
+	<div class = 'panel' ng-show = 'imgpanel.isSelected(2)'>
+		If you are going to allow feature administrators or members to upload (submit) Images, we strongly recommend that you set up automatic sizing. To do that, select the “Edit Picture Sizing Options” link at the bottom of your pictures Edit screen. When you do you will see a screen similar to the one show below:
+		<img src="HelpImages/Pictures/picturesizing.jpg" alt="Image Sizing Settings" />
+		<em>Note: Limits you establish here also apply to Photo Albums.</em><br />
+		<br />
+		<strong>File Limit – Upload Size:</strong> This field is used to establish an upper limit to the maximum size an image can be to be an acceptable upload. Image file size determines how long it takes to display the image on a page. Smaller is better.<br />
+		<br />
+		<strong>File Limit – Total Size:</strong> This field is used to establish how much of your total site disk space allocation you wish to make available to images. If you don’t know what your total disk space allocation is, please check with your support representative. Generally, 50% of the total allocation is a good rule of thumb for image space allocation.<br />
+		<br />
+		<strong>File Limit – Total Files:</strong> This field is used to establish an upper limit on the total number of image files that can be uploaded. If the images on your site are generally small (under 150kb in file size), you can set this limit fairly large (300-500).<br />
+		<br />
+		<strong>Restrict Image Width/Height?</strong> This is a very important option especially if you allow others to upload images. It provides a way for you to control the file and display size of uploaded images automatically. It works in conjunction with the three options below.
+		<ul>
+			<li>Width Limit: This field allows you to establish an upper limit to the width of an uploaded image. As a general rule, images should be 400 pixels wide or less.</li>
+			<li>Height Limit: This field allows you to establish an upper limit to the height of an uploaded image. As a general rule, images should be 400 pixels high or less.</li>
+			<li>Resizing Method: Images can be forced to a specific size, which can cause distortion, or resized proportionally. When you select the “proportional” option, the image will be resized to the lower of the Width or Height limit. As an example, if you set the Width Limit field to 250, an image that is 2592 pixels x 1728 pixels, would be resized to 250 x 176 – the upper limit on the height controlling the resizing in the proportional option but the image proportions being maintained. The same photo would be resized to 250 X 250 if you selected the forced option. We recommend using the Proportional option.</li>
+		</ul>
+		When you have finished, select “Save Advanced Option.”
+	</div>
+	<div class = 'panel' ng-show = 'imgpanel.isSelected(3)'>
+		When you want to upload a new picture for use on your site, click the features tab in your main admin menu, then select "Manage" for the Pictures feature.  This will show you the list of all pictures uploaded to your site:
+		<img src="HelpImages/Pictures/pictureslist.jpg" alt="Master Picture List" />
+		At the top there will be a picture approval area. If you've configured your pictures section to allow user submissions and do not automatically accept those submissions, the pictures submitted by users will appear here for your approval. You can either approve them or delete them. If you approve them, they will appear in the master picture list on the same screen and be usable on your site.<br />
+		<br />
+		<div class = 'subHead'>Uploading Pictures</div>
+		Uploading can be accomplished on the picture “manage” screen by selecting the “Upload a new picture file” link, located at the top and bottom of the picture list. This is also the dialog a user will see when the “allow user submissions” option has been set up on the “edit” screen and they select “submit.”
+		<img src="HelpImages/Pictures/picturesupload.jpg" alt="Picture Upload Screen" />
+		<strong>Comments</strong> - We recommend that you enter the name of the page, album, or subject. Since you can click on the “comments” links on the Pictures folder window, being able to group them by page, by album, by subject, etc. will make finding and identifying them a lot easier.<br />
+		<br />
+		<strong>File name</strong> - Use “Browse” to locate the picture on your local PC that you want to upload. The “size limit” display just below the File name is taken from your definition on the resizing option screen (see the 'resizing' tag at left).<br />
+		<br />
+		<strong>Category</strong> – Choose the category from the drop down list. This list is generated from the categories you enter in the 'edit' tab for the mailing list feature.<br />
+		<br />
+		<strong>Approval</strong> - The specific “Approval” message depends on your approval process definition on the “edit” screen. The text above is displayed because the option to require approval is set on the “edit” screen.<br />
+		<br />
+		<strong>Copyright Text</strong> – If you are concerned about the copyright on the image, you can enter text in this area which will be displayed at the top of the image.<br />
+		<br />
+		Uploading an image can take some time, so be patient. The upload time depends on the size of your file and the speed of your connection. You are notified that the upload was successful. Once the image or images are uploaded, they are available for use on your site as images on a web page or pictures in an album.
+	</div>
+	<div class = 'panel' ng-show = 'imgpanel.isSelected(4)'>
+		For images displayed on your site, you can change the image without having to delete the old one, upload a new one, and re-link it to the page area. The “Replace” function does all of that for you in one operation.
+		<img src="HelpImages/Pictures/picturesdelete.jpg" alt="Delete/Replace Image Links" />
+		<div class = 'subHead'>Replacing Images</div>
+		To replace an image, select the “Replace” link next to the “old” image in the picture folder, browse to the “new” image on your local PC, and “Upload” it. That’s all there is to it!<br />
+		<br />
+		Please Note: This process works best if the new image has the same filename as the old image, so try to make sure those match up before using the replace option.  If they have different file names, when you replace an image, you may have to go to the page area where that image is displayed and re-insert it.<br />
+		<br />
+		<div class = 'subHead'>Deleting Images</div>
+		Over time, you will have uploaded many images that fall into disuse. It is a good practice to periodically clean up the picture folder. If you intend to use an image again, by all means leave it in the picture folder, but if you no longer need it, delete it. To delete an image, select the “Delete” link next to the no-longer-needed image and confirm.  To delete multiple images at once, check the 'delete file?' box for the row(s) you want to delete and click the 'delete selected files' button at the top or bottom of the screen.
+	</div>
+	<div class = 'panel' ng-show = 'imgpanel.isSelected(5)'>
+		Even an old 3 Mega-Pixel camera creates pictures that are about 500 KB – generally too big to put on your web site and have them load quickly and effectively. The higher the Mega-Pixel rating of your camera, the larger the file it will produce.<br />
+		<br />
+		The picture feature has an option that will help. You can, and probably should, activate the “Restrict Image Width/Height?” option, especially if you allow others to upload images. It provides a way for you to control the file and display size of uploaded images automatically. Click the 'Sizing' tag at left for more information on the resizing option.<br />
+		<br />
+		If you are not using the “Restrict Image Width/Height,” images should always be resized manually before uploading to your site. The smaller the picture the faster it will load. Ideally, your resized photos should be 200kb or smaller. If your images are still to slow to load, even after resizing, you may need an image editing program (e.g. Photoshop, Photo Studio, Paint Shop, MS Picture It) to restrict the pixel density and size – the specific steps involved with each of these is beyond the scope of this guide. Using a photo editor has the advantage of being able to adjust the color and contrast as well as cropping the picture.<br />
+		<br />
+		You do not have to invest a lot of money is photo editing software. There are many excellent packages available at very reasonable purchase amounts – and some of them are free.<br />
+		<br />
+		Your customer support manager can also assist with resizing photos- contact <a href = 'mailto:custcare-director@nordenterprises.com'>custcare-director@nordenterprises.com</a> for help.
+	</div>
+</section>
