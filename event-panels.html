@@ -1,0 +1,133 @@
+<section>
+	<div class = 'leftMenu'>
+		<div class = 'leftMenuHeadline'>
+			<em>You are viewing the guide to working with Events<br />
+			<br />
+			Click any tag below to see more info</em>
+			<br />
+			<br />
+		</div>
+			<a href ng-click = 'eventpanel.selectTab(0, "Setup")'>
+				<li ng-class = "{active:eventpanel.isSelected(0)}">
+					Setup
+				</li>
+			</a>
+			<a href ng-click = 'eventpanel.selectTab(1, "Colors")'>
+				<li ng-class = "{active:eventpanel.isSelected(1)}">
+					Colors
+				</li>
+			</a>
+			<a href ng-click = 'eventpanel.selectTab(2, "Adding Events")'>
+				<li ng-class = "{active:eventpanel.isSelected(2)}">
+					Adding Events
+				</li>
+			</a>
+			<a href ng-click = 'eventpanel.selectTab(3, "Recurring Events")'>
+				<li ng-class = "{active: eventpanel.isSelected(3)}">
+					Recurring Events
+				</li>
+			</a>
+			<a href ng-click = 'eventpanel.selectTab(4, "Automated Reminders")'>
+				<li ng-class = "{active:eventpanel.isSelected(4)}">
+					Reminders
+				</li>
+			</a>
+			<a href ng-click = 'eventpanel.selectTab(5, "The User Interface")'>
+				<li ng-class = "{active: eventpanel.isSelected(5)}">
+					User Interface
+				</li>
+			</a>
+			<a href = 'helpHome.php'>
+				<li>Home</li>
+			</a>
+	</div>
+	<div class = 'mainContent'>
+		<h1>Working with Events: {{eventpanel.msg}}</h1>
+	<div class = 'panel' ng-show = 'eventpanel.isSelected(0)'>
+		<img src="HelpImages/Events/eventslink.jpg" alt="Events Link" />
+		The Calendar of Events is a feature that allows you to display upcoming events to your site visitors. Like all features, it can be linked to a menu item (button) or to a page area using the link button in the page area editor.<br />
+		<br />
+		<div class = 'subHead'>Setting Up the Calendar</div>
+		Select “Features” from the Admin panel, and “edit” next to the Events feature. You will see a screen similar to the one shown below.
+		<img src="HelpImages/Events/edittop.jpg" alt="Top of Edit Screen" />
+		<strong>Site Title:</strong> If you prefer to name the calendar something other than the default “Events” you can change the name here. This is the title that will be displayed when the Calendar of Events is displayed on the site.<br />
+		<br />
+		<strong>Feature Admin:</strong> Selecting a feature administrator from the drop list of your available feature administrators allows you to share the calendar maintenance duties with someone else. Use the drop-down menu to display a the list of feature administrators (Their User records are marked as Feature Administrators).<br />
+		<br />
+		<strong>Categories:</strong> Categories allow you to organize your events- users of the site can then filter their calendar view by these categories when browsing the site. You can use the text box to enter categories you'd like to use- one category per line.<br />
+		<br />
+		<strong>Allow User Submissions:</strong> If you would like your site visitors to be able to submit their own entries for the calendar, select “yes.” Otherwise, select “no.”<br />
+		<br />
+		<strong>Automatically Accept User Submissions:</strong> Assuming you allow submissions (above), you can control whether those submissions are automatically added to the calendar (“yes”) or require review and approval before appearing on the calendar (“no”).<br />
+		<br />
+		<strong>Require User Authentication:</strong> If you want only logged in users to be able to view the calendar, select “yes.” Otherwise, select “no.”<br />
+		<br />
+		<strong>Keep Past Events For:</strong> You can choose how long the system will store a record of past events. Choose from the drop down list (the default will be “1 Year”- past events will not be deleted from the system).
+	</div>
+	<div class = 'panel' ng-show = 'eventpanel.isSelected(1)'>
+		<img src="HelpImages/Events/calendarcolors.jpg" alt="Calendar Color Control" />
+		This section (also on the calendar's 'edit' screen) works much like the main '”Look n Feel” tab on your admin panel, but this is specifically to control the colors of the calendar feature. You can select basic colors from the drop down list, or use specific color codes if you desire (contact your regional support manager for help if you need to find a specific color).<br />
+		<br />
+		Be sure to click the 'save' button at the bottom of the screen to save your changes and you can move on to adding specific events to the calendar!
+	</div>
+	<div class = 'panel' ng-show = 'eventpanel.isSelected(2)'>
+		<img src="HelpImages/Events/eventslink.jpg" alt="Events Manage Link" />
+		Once the calendar has been set up, adding events is the next step. Select “manage” next to the “Events” feature and you will see a screen similar to the one shown below.
+		<img src="HelpImages/Events/manageevents.jpg" alt="Events Manage Screen" />
+		To add a new event to the calendar, select the “Create New Event” link. If you allow user submissions and have selected the “Automatically Include…” option, those events will appear in the Current Events section of this screen. Click the 'edit' link for any event to edit the event's information, or click the 'delete' link to remove it. You can also use the selection checkbox (to the left of the exisitng events) to delete multiple events at once.<br />
+		<br />
+		If you allow user submissions but have not selected the “Automatically Accept…” option, those events will appear in the “User Submitted Events Awaiting Approval” section (just below the Current Events).<br />
+		<br />
+		The bottom section of this screen shows past events. You have the option to se the automatic deletion timeframe on the 'edit' screen as discussed above. Past events may also be deleted manually. This is the “Create New Event” form.<br />
+		<em>Note: If you have enabled the “Allow User Submissions” option, this is the form a user will see when submitting an event as well (with some slight changes)</em>
+		<img src="HelpImages/Events/createeventtop.jpg" alt="Event creation - top" />
+		<strong>Event Date:</strong> Enter the date of the event. You can either manually enter the date in the format yyyy-mm-dd or click the small calendar icon to select from a pop up calendar.<br />
+		<br />
+		<strong>Event Time:</strong> Select the starting time for the event by clicking on the hours and minutes dropdown menus. If you wish to display an event without a time, select “00” in the hours dropdown. Finally, select AM or PM for the start time.<br />
+		<br />
+		<strong>Recurring Event:</strong> Select 'yes' to create a recurring event. Click the Recurring Events tag at left for details.<br />
+		<br />
+		<strong>Event Organizer:</strong> You can choose from a drop down list of users, or enter contact info for the event organizer manually in the text fields. Note that each event will need a name and phone number and/or email address associated with it.<br />
+		<br />
+		<strong>Event Reminder:</strong> Select 'yes' to enable an event reminder email. See below for details on this feature. Note that recurring events cannot have an event reminder (only single date events can use this feature).<br />
+		<br />
+		<strong>Category:</strong> Choose from this drop down list if you want to assign this event to a category (see Setup tag for details on adding new category options).
+		<img src="HelpImages/Events/eventcontent.jpg" alt="Add event title and description" />
+		<strong>Title:</strong> Give your event a title. Click the small triangle just above to display the formatting toolbar.<br />
+		<br />
+		<strong>Description:</strong> Enter the event's description. Your display will have the formatting toolbar available- you can add text effects, links, pictures, etc.
+		<img src="HelpImages/Events/createeventbottom.jpg" alt="Event Creation - bottom" />
+		<strong>Approved:</strong> This option will be set to 'yes' for all admin-entered events. If a user has submitted an event, and your calendar feature isn't set to automatically accept events, you will have the option to approve the event or not.<br />
+		<br />
+		<strong>Additional Info Link</strong> – Normally not needed. It provides a way to link the ad to another page on your site or to an external URL, causing an “additional info” link to appear at the bottom of the event.  You can also add links to the description field using the formatting toolbar (just as you would in any page area).  Inserting links can be useful for board meeting event listings (you can link to a PDF agenda file, etc).
+	</div>
+	<div class = 'panel' ng-show = 'eventpanel.isSelected(3)'>
+		<img src="HelpImages/Events/recurringeventradio.jpg" alt="Recurring Event Radio Button" />
+		Select the 'yes' radio option for the Recurring event field and a few new options will appear:
+		<img src="HelpImages/Events/recurringeventinfo.jpg" alt="Recurring Event Configuration" />
+		<strong>Recurs On:</strong> Gives you a few options for how often you'd like the event to recur. You can choose a period from the drop down list (Daily, Weekly, Monthly, Yearly), or you can choose certain days of the week.<br />
+		<br />
+		<strong>Ends On:</strong> You can have your recurring event end on a specific date. Either enter the date in YYYY-MM-DD format, or click the calendar icon to choose a date.
+	</div>
+	<div class = 'panel' ng-show = 'eventpanel.isSelected(4)'>
+		<img src="HelpImages/Events/eventreminderradio.jpg" alt="Event Reminder Radio Button" />
+		Select the 'yes' radio option for the Event Reminder field and a few new options will appear (note that event reminders will not work with recurring events):
+		<img src="HelpImages/Events/reminderinfo.jpg" alt="Event Reminder Configuration" />
+		<strong>Send To:</strong> Choose the mailing list you want to use from this drop down list. You'll be able to select from any mailing list where you are set up as an administrator (to add new mailing lists, on your admin panel, click the 'features' tab, then click the 'manage' link for the Mailing List feature).<br />
+		<br />
+		<strong>Send On:</strong> Choose when to send the message. You can send it on the event date, or on a set number of days before the event is scheduled to occur. The message will automatically be sent in the early morning of the date you choose.<br />
+		<em>-Something to note: When you set up an event reminder, the message text and title will be saved on this screen. If you'd like your reminder to be sent more than once, just edit this event and change the 'send on' number of days before. When you save the event after changing that number, you can effecitvely resend the same reminder.</em><br />
+		<br />
+		<strong>Reminder Subject:</strong> Enter the title of the email that will be sent.<br />
+		<br />
+		<strong>Reminder Email:</strong> Type the message you'd like to send. Using the formatting toolbar, so you can send images, links, and format the text however you'd like.<br />
+		<br />
+		Remember to click the 'save' button at the very bottom of the event edit screen and your email will be saved and sent on the day you chose. If you need to edit the email, just choose to edit this event and you will have that option.
+	</div>
+	<div class = 'panel' ng-show = 'eventpanel.isSelected(5)'>
+		<img src="HelpImages/Events/caluserview.jpg" alt="Calendar - User View" />
+		Site users will be able to choose their desired view (day/week/month). Clicking on an existing event will open a pop up window with the description of that event.
+		<img src="HelpImages/Events/calpopup.jpg" alt="Calendar Day Pop Up Info " />
+		If they click on a blank day in the calendar display, a user can submit an event for the calendar (if you've chosen to allow user submitted events). Alternately, they can click the 'submit' button in the left hand menu.
+	</div>
+</section>

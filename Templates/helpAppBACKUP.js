@@ -3,13 +3,13 @@
 	var app = angular.module('helpapp', [])
 
 	//section for master controller
-	app.controller('MasterController', function MasterController($scope) {
+	app.controller('MasterController', function MasterController() {
 		var master = this;
 
 		//controls switching between tags on individual help page
 		(function panelSwitcher() {
 			master.tab = 0;
-			master.msg = 'General';
+			master.msg = 'General Info';
 
 			master.selectTab = function(setTab, setMsg) {
 				master.tab = setTab;
@@ -89,33 +89,6 @@
 			restrict: 'E',
 			templateUrl: 'img-panels.html',
 			controllerAs: 'imgpanel'
-		};
-	});
-
-	//events directive
-	app.directive('eventPanels', function() {
-		return {
-			restrict: 'E',
-			templateUrl: 'event-panels.html',
-			controllerAs: 'eventpanel'
-		};
-	});
-
-	//ads directive
-	app.directive('adPanels', function() {
-		return {
-			restrict: 'E',
-			templateUrl: 'ad-panels.html',
-			controllerAs: 'adpanel'
-		};
-	});
-
-	//directory directive
-	app.directive('directoryPanels', function() {
-		return {
-			restrict: 'E',
-			templateUrl: 'directory-panels.html',
-			controllerAs: 'directorypanel'
 		};
 	});
 

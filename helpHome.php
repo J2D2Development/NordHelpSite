@@ -106,18 +106,22 @@
 						</div>
 					</div>
 				</a>
+				<a href = 'helpDirectory.php'>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Resident Directory</div>
-							Coming Soon!
+							Learn to manage your online resident directory feature.
 						</div>
 					</div>
+				</a>
+				<a href = 'helpEvents.php'>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
-							<div class = 'buttonTitle'>User Groups</div>
-							Extended Package Only...
+							<div class = 'buttonTitle'>Events Calendar</div>
+							Learn about adding events to the calendar, recurring events, email reminders, and more.
 						</div>
-					</div>	
+					</div>
+				</a>
 			</div>
 		</div>
 <!--End of Row 2-->
@@ -125,6 +129,14 @@
 <!--Row 3 start-->
 		<div class = 'helpHomeRowWrapper'>
 			<div class = 'helpHomeRow'>
+				<a href="helpAds.php">
+					<div class = 'helpHomeButtonWrapper'>
+						<div class = 'helpHomeButton'>
+							<div class = 'buttonTitle'>Classifieds/Services</div>
+							Learn about ads - a great way to earn revenue or provide a marketplace for your residents.
+						</div>
+					</div>
+				</a>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Request Forms</div>
@@ -133,14 +145,8 @@
 					</div>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
-							<div class = 'buttonTitle'>Events Calendar</div>
-							Coming Soon!
-						</div>
-					</div>
-					<div class = 'helpHomeButtonWrapper'>
-						<div class = 'helpHomeButton'>
-							<div class = 'buttonTitle'>Classifieds/Services</div>
-							Coming Soon!
+							<div class = 'buttonTitle'>User Groups</div>
+							Extended Package Only...
 						</div>
 					</div>
 					<div class = 'helpHomeButtonWrapper'>
@@ -201,7 +207,7 @@
 </body>
 
 <script>
-//homepage only function - item hover effect
+//homepage version of back to top button
 $(document).ready(function() {
 	$(window).scroll(function() {
 		if($(this).scrollTop() > 200) {
