@@ -14,32 +14,27 @@
 			</a>
 			<a href ng-click = 'directorypanel.selectTab(1, "Main Page Properties")'>
 				<li ng-class = "{active:directorypanel.isSelected(1)}">
-					Creation
+					Configuration
 				</li>
 			</a>
-			<a href ng-click = 'directorypanel.selectTab(2, "Page Areas")'>
+			<a href ng-click = 'directorypanel.selectTab(2, "Initial Upload")'>
 				<li ng-class = "{active:directorypanel.isSelected(2)}">
-					Page Areas
+					Initial Upload
 				</li>
 			</a>
-			<a href ng-click = 'directorypanel.selectTab(3, "Menu Items")'>
+			<a href ng-click = 'directorypanel.selectTab(3, "Edit an Entry")'>
 				<li ng-class = "{active: directorypanel.isSelected(3)}">
-					Menu Items
+					Edit an Entry
 				</li>
 			</a>
 			<a href ng-click = 'directorypanel.selectTab(4, "Working with Images")'>
 				<li ng-class = "{active:directorypanel.isSelected(4)}">
-					Images
+					Pictures
 				</li>
 			</a>
-			<a href ng-click = 'directorypanel.selectTab(5, "Formatting Toolbar")'>
-				<li ng-class = "{active: directorypanel.isSelected(5)}">
-					Formatting
-				</li>
-			</a>
-			<a href ng-click = 'directorypanel.selectTab(6, "Page Admin")'>
-				<li ng-class = "{active: directorypanel.isSelected(6)}">
-					Page Admin
+			<a href ng-click = 'directorypanel.selectTab(5, "User Interface")'>
+				<li ng-class = "{active:directorypanel.isSelected(4)}">
+					User Interface
 				</li>
 			</a>
 			<a href = 'helpHome.php'>
@@ -49,17 +44,91 @@
 	<div class = 'mainContent'>
 		<h1>Working with the Directory: {{directorypanel.msg}}</h1>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(0)'>
+		<p>The resident directory is a database of information about the residents in your community. It is typically one of the most popular features on an HOA site. Since the feature can be secured (i.e. made available only to other residents, or only to specific people) and since a resident can alter their information – remove email addresses or phone numbers – security of private information is assured.</p>
+		<p>Normally, the initial information is uploaded from a list you provided at start up time, so maintenance is only required when residents move in or move out. However, if you don't have an initial database of residents, individual entries can be easily added.</p>
+		<p>There are several options for controlling the display of information on the web site directory screen. To access the resident’s directory, select “Features” on the administrator’s panel and you'll see a row for "Owner/Resident Directory"</p>
+		<img src="HelpImages/Directory/directorymainlink.jpg" alt="Main Directory Link" />
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(1)'>
+		Click the 'edit' link for the owner/resident directory feature and you'll see a screen similar to the one below:
+		<img src="HelpImages/Directory/directoryedittop.jpg" alt="Directory Edit - Top" />
+		<p><strong>Site Title</strong> – Enter the title that you would prefer to use on the directory display (e.g. Our Community, Community Listing, etc.).</p>
+		<p><strong>Feature Admin</strong> – If you wish to assign responsibility for directory maintenance to another user, you may select a feature administrator from the drop-down list. Only those users who have the “feature administrator: option selected in their user records are displayed here. The directory administrator can update the directory directly from the site by using the “manage” button on the directory screen.</p>
+		<p><strong>Require User Authentication</strong> – If you want to secure the display, select “Yes”, requiring a user logon. Select “No” if you do not. Since the directory displays information that may be considered private, we recommend that you set this option to “yes.”</p>
+		<p><strong>Set Group Authentication Limit</strong> – If you want to make the directory display on the site available only to members of one or more of your defined User Groups, change the “Set User Group Authentication Limit?” from a “no” to a “yes”. You can then select any of the User Groups you have defined. As an example, if you wanted the directory available only to members of the Board, and the “Board Members” group was defined in the “User Group Feature,” you would set the User Groups authentication option to a “yes” and select the “Board Members” group. For more information on setting up User Groups, see the User Groups guide (coming soon).</p>
+		<p><strong>Threshold for search/index mode</strong> – For very large directory listings you can elect to display the directory with an “index,” requiring the user to select a letter (last name) before displaying the entries. Normally, you will want to display the entire directory, but you can set the threshold that causes the index to appear here.</p>
+		<img src="HelpImages/Directory/directoryeditmid.jpg" alt="Directory Edit - Middle" />
+		<p><strong>Allow user to update directory</strong> - Select “yes” if you want to allow users to update their own directory records. If you select “yes” and the user record is tied to the directory record by means of a common property address (the Home record), then your users will be able to select the “Your Entry” button on the directory display. If you select “no” they will not have the ability.</p>
+		<p><strong>Update user record for directory entries</strong> – Select “yes” if want to allow the changes a user makes to their directory record to update the information in their User record. You can select “yes” which enables the automatic updates; “no” which disables the automatic update; or, “notify” which enables the update and sends an email to the administrator notifying them (you) of the changes that have been made in the Directory and used to update the User record. This option is only available if the “Allow user to update directory…” option is set to “yes.”</p>
+		<p><strong>Use Building/Section</strong> - If your community is subdivided into buildings or sections, you can optionally sort the directory display by those buildings or sections. To do that, select “yes” here. When a resident views the directory and selects the “By Address” option, the listing will be that sequence. Note: the building/section must be in the Home record for this option to work. You can also force the system to display an index of the buildings or sections by lowering the “threshold” to a number lower than the actual number of home records.</p>
+		<p><strong>Include non-resident owner</strong> - If you would like the directory listing to include the name and addresses of any non-resident owners, select “yes,” if not select “no.”</p>
+		<p><strong>Display non-resident owner’s off-site</strong> - If you would like to display the out-of-community addresses of any non-resident owners, in addition to their in-community address, select “yes”. If not, select “no.” If you choose “yes” an additional line “Off-Site Address” will be displayed for all entries, and the actual off-site address will appear below this line for any non-resident owners.</p>
+		<p><strong>Display lot numbers</strong> - This option allows you to include the lot number on the display. It is only valid if lot numbers were captured in the Home record.</p>
+		<img src="HelpImages/Directory/directoryeditbottom.jpg" alt="Directory Edit - Bottom" />
+		<p>You can define your own labels for four additional, multi purpose fields. The first two appear in the “Home” section of the directory. The second two appear in each of the “entry # information” sections.</p>
+		<p><strong>General Custom Field 1</strong> – Enter the field label (optionally) for field 1. This option will then appear when you edit any individual directory entry.</p>
+		<p><strong>General Custom Field 2</strong> – Enter the field label (optionally) for field 2. This option will then appear when you edit any individual directory entry.</p>
+		<p><strong>Per Entry Custom Field 1</strong> – Enter the field label (optionally) for field 1. This option will then appear when you edit any individual directory entry listing.</p>
+		<p><strong>Per Entry Custom field 2</strong> - Enter the field label (optionally) for field 2. This option will then appear when you edit any individual directory entry listing.</p>
+		<p><strong>Introduction Text</strong> - Any text entered here will appear above the main directory listing in the user interface.  You can use this to provide details about the directory or notices specific to that section.</p>
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(2)'>
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(3)'>
+		This is the default view (“Entries By Name”) but there are two other views available by selecting the links at the top. You can display a listing of all residents in alphabetical sequence by selecting “Manage All Directory Entries” or you can display a listing of all streets by selecting “Go to Entries by Street List”.
+Resident Directory Maintenance Site Administrator’s Guide
+Page 2 of 8
+Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
+Rev Jan 2008
+From any of the views, locate the specific directory entry that you want to modify and select “edit” for that record.
+If you are adding a new record, select “Add New Directory Entry” at the bottom of the screen.
+		The screen below is the top portion of the directory maintenance screen.
+Resident Directory Maintenance Site Administrator’s Guide
+Page 3 of 8
+Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
+Rev Jan 2008
+Home – By definition, entries in the residents directory are residents or non-resident owners of property in the community and each entry defines a single property. For owners, all entries should be attached to a home record. The process is simple; just select the home in the drop down menu.
+Land Line – Enter the phone number (optional) as you want it displayed, e.g. (123) 555-1212, or 123-555-1212.
+General Custom Field 1 – (in this example “Children”) Enter a value (optional) corresponding to the field definition that you have established. See page 7 for more information.
+General Custom Field 2 – (in this example “Pets”) Enter a value (optional) corresponding to the field definition that you have established. See page 7 for more information.
+Entry 1 Information:
+Entry Type – Select “Non-owner Resident” for renters; select “Non-Resident Owner” for those owners that do not live at the property (typically, Landlords); select “Resident Owner” for owners who do live at the property (this is the most common designation). When you select “Non-resident Owner” new fields will be displayed for entry of the out-of-community address as shown in the example screen on the prior page. You should fill in these fields manually.
+User ID – If User IDs for residents at this Home address have already been established in the User record, you can locate the User ID for this person by using the drop down menu button. This is especially important in Entry 1 because it allows that person to modify their directory entry from the directory display, using the “Your Entry” button.
+Name – Enter the name of the resident in the appropriate name fields. The directory will display it exactly as entered so you should enter them with leading capital letters (e.g. “George” – not “george”).
+Date of Birth – Enter the date of birth (optionally) in the yyyy-mm-dd format. Alternatively, you click on the small calendar icon and navigate to the date of birth by using the year 􀃅 and month 􀃅 links at the top of the display.
+Phone – If you need to enter an additional phone number, enter it (optionally) here. Enter it as you want it displayed, e.g. (123) 555-1212, or 123-555-1212. If you have given the user the option, they can remove the phone number – or update it – in their directory record.
+Email Address – Enter the email address (optionally) here. Pay attention to the case of the address – some email services are case sensitive. If you have given the user the option, they can remove the email address – or update it – in their directory record. Email addresses on the directory display page become email links, allowing residents to communicate with each other conveniently.
+Per Entry Custom Field 1 – (in this example, Cell Phone Number); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.
+Per Entry Custom Field 2 – (in this example, not set up); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.
+When you have completed the information in this section, select “Save and stay here.” When you do that, new field are available for entry of additional residents.
+Resident Directory Maintenance Site Administrator’s Guide
+Page 4 of 8
+Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
+Rev Jan 2008
+Entry 2 Information
+These additional entry sections are used to record the information for other residents at this address. Typically, Entry 2 Information is used for a spouse, significant other, or co-owner. Entries 3 and beyond can be used for children, mothers-in-laws, etc. depending on your requirements. The information in these sections is entirely optional. Only the first two entries will be displayed on the web site’s directory screen. Others can be displayed by selecting the “detailed listing” option.
+Entry Type – Select “Non-owner Resident” for renters; select “Non-Resident Owner” for those owners that do not live at the property (typically, Landlords); select “Resident Owner” for owners who do live at the property (this is the most common designation). When you select “Non-resident Owner” new fields will be displayed for entry of the out-of-community address as shown in the example screen on the prior page. You should fill in these fields manually.
+User ID – If User IDs for residents at this Home address have already been established in the User record, you can locate the User ID for this person by using the drop down menu button.
+Name – Enter the name of the resident in the appropriate name fields. The directory will display it exactly as entered so you should enter them with leading capital letters (e.g. “Linda” – not “linda”).
+Date of Birth – Enter the date of birth (optionally) in the yyyy-mm-dd format. Alternatively, you click on the small calendar icon and navigate to the date of birth by using the year 􀃅 and month 􀃅 links at the top of the display.
+Resident Directory Maintenance Site Administrator’s Guide
+Page 5 of 8
+Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
+Rev Jan 2008
+Phone – If you need to enter an additional phone number, enter it (optionally) here. Enter it as you want it displayed, e.g. (123) 555-1212, or 123-555-1212. If you have given the user the option, they can remove the phone number – or update it – in their directory record.
+Email Address – Enter the email address (optionally) here. Pay attention to the case of the address – some email services are case sensitive. If you have given the user the option, they can remove the email address – or update it – in their directory record. Email addresses on the directory display page become email links, allowing residents to communicate with each other conveniently.
+Per Entry Custom Field 1 – (in this example, Cell Phone Number); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.
+When you have completed the information in this section, select “Save and stay here.” When you do that, new fields become available for entry of additional residents. If later you want to delete the information in one of the sections, simple select the “Delete Entry #” button on the left side.
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(4)'>
+		<p>At the bottom of the screen when editing any individual directory entry, you'll see a section for adding/editing an image:</p>
+		<img src="HelpImages/Directory/directorymanageentrypic.jpg" alt="Manage Directory Entry - Picture" />
+		<p><strong>Directory Picture</strong> – may be used to display a picture of residents or their home. Pictures entered here are part of your total disk space allocation. If you choose to use this feature, please make sure your pictures are very small – ideally under 10kb. The directory listing displays all pictures 250 pixels wide regardless of their actual size. Pictures entered here are stored in a different folder than your other site images and can only be uploaded from this panel.</p>
+		<p>If you have already uploaded the picture, you may select it in the “Select from list” drop-down. This is useful if you have made an error in assigning the photo or want to change the photo periodically. New pictures are uploaded by entering “comments” (e.g. The Allens) and navigating to the appropriate picture on your local PC by selecting the “Browse” button. Once you have located the picture, select “Save and stay here” or “Save and return to list”.</p>
+		<p>Your residents can upload their own pictures by selecting “My Entry” from the main directory screen. Since most of your residents will likely not understand how to make their picture suitable for the site, it is a good practice to perform the upload yourself.</p>
+		<p>To remove (not delete) a picture, select “No picture selected” from the drop-down menu. Deletion of pictures from this folder requires contacting your support provider.</p>
+		<p>For more information on managing picture sizes, please see the Prep tag in the <a href="helpImages.php">Images guide</a>.
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(5)'>
-	</div>
-	<div class = 'panel' ng-show = 'directorypanel.isSelected(6)'>
 	</div>
 </section>
