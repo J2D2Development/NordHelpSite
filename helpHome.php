@@ -39,9 +39,7 @@
 				<div class = 'bodyWrapperSubText'>
 					Scroll down to learn more about working with your site builder and its features.<br />
 					<br />
-					The first six guides in the list are now live!  Click on Pages, Mailing Lists, Documents, General, Images, or User Accounts to check them out.<br />
-					<br />
-					Check back soon as we will add a couple more each week.<br />
+					Many guides are now up and running. Check back soon as we will add a couple more each week.<br />
 					<br />
 					<em>Questions?  Contact us at custcare-director@nordenterprises.com</em>
 				</div>
@@ -81,11 +79,11 @@
 							<div class = 'buttonTitle'>General Tab</div>
 							Learn about sitewide footers, data export, user form properties, and more!
 						</div>
-					</div>	
-				</a>				
+					</div>
+				</a>
 			</div>
 		</div>
-<!--End of Row 1-->	
+<!--End of Row 1-->
 
 <!--Row 2 start-->
 		<div class = 'helpHomeRowWrapper'>
@@ -137,12 +135,14 @@
 						</div>
 					</div>
 				</a>
+				<a href="helpForms.php">
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Request Forms</div>
-							Extended Package Only...
+							Create custom online request forms for your users (Extended Package Only).
 						</div>
 					</div>
+				</a>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>User Groups</div>
@@ -154,7 +154,7 @@
 							<div class = 'buttonTitle'>Look n Feel</div>
 							Coming Soon!
 						</div>
-					</div>	
+					</div>
 			</div>
 		</div>
 <!--End of row 3-->
@@ -185,7 +185,7 @@
 							<div class = 'buttonTitle'>Recordkeeping</div>
 							Coming Soon!
 						</div>
-					</div>	
+					</div>
 			</div>
 		</div>
 <!--End of row 4-->

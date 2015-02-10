@@ -33,7 +33,7 @@
 				</li>
 			</a>
 			<a href ng-click = 'directorypanel.selectTab(5, "User Interface")'>
-				<li ng-class = "{active:directorypanel.isSelected(4)}">
+				<li ng-class = "{active:directorypanel.isSelected(5)}">
 					User Interface
 				</li>
 			</a>
@@ -73,52 +73,94 @@
 		<p><strong>Introduction Text</strong> - Any text entered here will appear above the main directory listing in the user interface.  You can use this to provide details about the directory or notices specific to that section.</p>
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(2)'>
+		<p>If you already have a list of residents and their addresses in electronic format (e.g. an Excel Spreadsheet or Access Database) and can produce a comma-separated values (.csv) file with the information, you do not have to create the users, directory, and homes records manually. You can upload the information directly into the system.  <em>Directions for uploading are below, but formatting can be tricky, so contact your customer support manager if you need a hand and they'll be glad to help.</em></p>
+		<p>The process is not complicated.<br />
+		1) Create the .csv file<br />
+		2) Upload the information into the Directory (creating the Homeowners Directory and Homes List at the same time)<br />
+		3) Create the User Ids from the uploaded Directory information (optional, but recommended).</p>
+		<p>You should upload the directory Information first and make sure you have a successful load. This will create the Homeowner's Directory and the Homes list. Once this file has been successfully uploaded, you can create the user id's from it - immediately or later. Generally, only Primary Resident/Owner data is populated via upload. Additional household members (e.g. children, roommates) can be added by you or the homeowners after the initial load.</p>
+		<p><em>Note: This process is designed to be a one-time, start-up data load process. Performing updates with this process is possible, but not recommended. Instead, updates should be performed directly in the Directory.</em></p>
+		<p><div class = 'subHead'>Creating the .csv file:</div>
+		Prepare your data file with 4 or more columns of data. Do not include any column header rows in your file. Check – and edit – the file for consistency and accuracy (capitalization, spelling, missing information, etc.). Each Directory entry consists of a "home record" (the address of the home in the community) and information about the Primary Resident and/or Owner of that home (name, phone number, email address, etc.).</p>
+		<p>An example file might look like:</p>
+		<img src="HelpImages/Directory/uploadexcelfile.jpg" alt="Excel File Example" />
+		<p>A “Home record” is made up of as few as 2 fields and as many as 4, which form the postal address for the home. These 4 fields must be unique for each home.</p>
+		<p>The 4 fields are:
+		<ul>
+			<li><strong>Street Number (required)</li>
+			<li>Street Name (required)</strong></li>
+			<li>Number Suffix (optional)</li>
+			<li>Unit Number (optional)</li>
+		</ul>
+		<img src="HelpImages/Directory/homeuploadinfographic.jpg" alt="Home upload infographit" />
+		</p>
+		<p>In addition to the address fields, two other fields are available for further classification or identification of the homes in your community:</p>
+		<p><strong>Building/Section</strong> - Classifies the homes using a Building Name (e.g. in a condo complex) or a Section Name (e.g. in a large community)</p>
+		<p><strong>Lot</strong> – Classifies the homes by the Lot Numbers, which are usually assigned by the builder during development.</p>
+		<p>The <em>Street Number and Street Name</em> are the only required fields and will typically be the only fields needed in a community of single-family homes. Condo and apartment complexes may need to use the Unit and/or Building/Section information as well.</p>
+		<p>There are 2 required fields for the Primary Resident and/or Owner information (<em>Last Name and First Name</em>). In addition, there are 13 optional fields that you may choose to populate:</p>
+		<p><strong>Entry Type</strong> - specifies if the person is a (r)esident, an (o)wner, or (b)oth. If you do not provide this information in your upload file, all directory entries will be set to "b" for both.</p>
+		<p><strong>Phone Number</strong> - the personal phone number for the resident or owner. If you do not provide this field in your upload file, it will be left blank.</p>
+		<p><strong>Email Address</strong> - an email address for the primary resident and/or owner. If you do not provide this field in your upload file, it will be left blank. Note: email addresses are a critical part of making best use of your web site. We strongly suggest that you solicit and load email addresses as part of the upload. When you later create the user ids from this information, the system will send all the users with email addresses on file a start up announcement giving them their user id and password information.</p>
+		<p><strong>Land Line</strong> - the phone number physically located within the home, it is not intended for cell phone numbers. If you do not provide this field in your upload file, it will be left blank.</p>
+		<p><strong>Custom Home Field 1</strong> – Referred to on the directory edit screen as “General Custom Field 1”. One of the two available custom fields that you can define for the home (e.g. Year Joined, Number of Children. etc.). If you do not provide this field in your upload file, it will be left blank. You have the ability to set the label for this field in the edit screen for the directory feature.</p>
+		<p><strong>Custom Home Field 2</strong> - Referred to on the directory edit screen as “General Custom Field 2”. One of the two available custom fields that you can define for the home (e.g. Number of Pets, Parking Slot Number, Pool Key, etc.).If you do not provide this field in your upload file, it will be left blank. You have the ability to set the label for this field in the edit screen for the directory feature.</p>
+		<p><strong>Custom Per Entry Field 1</strong> – Referred to on the directory edit screen as “Per Entry Custom Field 1”. One of the two available custom fields that you define for each resident of the home (e.g. Marital Status, Cell Phone Number, etc.). If you do not provide this field in your upload file, it will be left blank. You have the ability to set the label for this field in the edit screen for the directory feature.</p>
+		<p><strong>Custom Per Entry Field 2</strong> – Referred to on the directory edit screen as “Per Entry Custom Field 2”. One of the two available custom fields that you define for each resident of the home (e.g. Work Phone Number, etc.). If you do not provide this field in your upload file, it will be left blank. You have the ability to set the label for this field in the edit screen for the directory feature.</p>
+		<p><strong>Outside Address 1</strong> – The non-resident owner’s outside mailing street address. If you do not provide this field in your upload file, it will be left blank.</p>
+		<p><strong>Outside Address 2</strong> - The non-resident owner’s outside mailing street address (use this field for apartment number, etc). If you do not provide this field in your upload file, it will be left blank.</p>
+		<p><strong>Outside City</strong> – The non-resident owner’s city. If you do not provide this field in your upload file, it will be left blank.</p>
+		<p><strong>Outside State</strong> - The non-resident owner’s state. If you do not provide this field in your upload file, it will be left blank.</p>
+		<p><strong>Outside Zip</strong> - The non-resident owner’s postal/zip code. If you do not provide this field in your upload file, it will be left blank.</p>
+		<p>The sequence of the data in the file <strong>must</strong> be as follows (see image below of the checkboxes for another example of the order):<br />
+		Number, Suffix, Street Name, Unit, Building/Section, Lot, Last Name, First Name(s), Entry Type, Phone Number, and Email Address.</p>
+		<p>In this example, we are not using the Suffix, Unit, Lot, or Entry Type so they are not in our data file. We are using the Number, Street Name, Building/Section, Last Name, First Name(s), Phone Number, and Email Address and they are in the correct sequence for uploading.</p>
+		<p><div class = 'subHead'>To Perform the Upload:</div>
+		Select “Features” from the Admin Page, then select “Manage Directory” from the Features Page. Finally, select “Upload Directory Entries from a file”. You will see instructions for performing the upload. Scroll to the bottom of the screen and you will see the Upload Form. In that form, select the columns that are present in your data file, and enter the data file name by selecting the “Browse” button and locating the file on your computer. The sequence of the columns in your data file must correspond to the sequence of the checkboxes in the Upload Process form.</p>
+		<img src="HelpImages/Directory/uploadcheckboxes.jpg" alt="Upload Process - Checkboxes" />
+		<p>If you have added some directory records manually, for practice as an example, it is a good idea to delete them before you upload the new information. This will insure that all fields are populated with consistency. You can do that by checking the “Delete…” box (shown above) on the screen before you upload the information.</p>
+		<p>The file will be uploaded to the server, the contents will be checked for proper format, and a test load will be performed. The results of the test load will be shown and, if you are satisfied that the data is being loaded correctly (data is in the correct columns, all the records loaded, etc), select "Confirm Load" to perform the permanent load. If something does not look right, select "Skip Load" to skip the permanent load, make any needed changes to the data file, and try again.  Again, formatting can be tricky, so contact us if you need any help.</p>
+		<p><div class = 'subHead'>Creating the User Ids and Passwords</div>
+		If you are still working on the site and are not yet ready to announce it, you do not have to create the user ids and initial passwords until you are. Since this process will send an email announcement and log on information to all residents with email addresses on file, you might want to try to collect additional email address in the interim. When you get an email address, enter it in the Directory for that resident.</p>
+		<p>Once you are ready to make the grand announcement, select “Users” from the Admin Panel and “Auto Generate User Accounts from Directory Entries.”</p>
+		<img src="HelpImages/Directory/autogenerateusers.jpg" alt="Autogenerate Link" />
+		<p><em>Please Note:</em> If you have added users manually, you should consider deleting them before generating the user accounts. Do not delete your own record. You may have to go into the records that you chose not to delete and “clean them up” after this generation. The “Home” records, as an example, will not be populated.  If you've already created some home records and assigned them to existing user accounts, and that home record matches one in your upload file exactly, the original user account will remain intact.</p>
+		<p>Once you click the link, you'll see more instructions above a button to start the process.  Note the checkbox is already selected- this is your only chance to automatically send all users their email/password during this initial creation process.  We recommend leaving it checked, but you can also always resend individual user account info via the 'users' tab on your admin panel.</p>
+		<img src="HelpImages/Directory/autogeneratescreentwo.jpg" alt="Autogenerate Main Screen" />
+		<p>This process is also designed as a one-time, start-up only process. Changes , additions, or deletions of user records after this initial load are performed one-at-a-time via the 'users' tab in your admin panel's main left hand menu</p>
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(3)'>
-		This is the default view (“Entries By Name”) but there are two other views available by selecting the links at the top. You can display a listing of all residents in alphabetical sequence by selecting “Manage All Directory Entries” or you can display a listing of all streets by selecting “Go to Entries by Street List”.
-Resident Directory Maintenance Site Administrator’s Guide
-Page 2 of 8
-Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
-Rev Jan 2008
-From any of the views, locate the specific directory entry that you want to modify and select “edit” for that record.
-If you are adding a new record, select “Add New Directory Entry” at the bottom of the screen.
-		The screen below is the top portion of the directory maintenance screen.
-Resident Directory Maintenance Site Administrator’s Guide
-Page 3 of 8
-Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
-Rev Jan 2008
-Home – By definition, entries in the residents directory are residents or non-resident owners of property in the community and each entry defines a single property. For owners, all entries should be attached to a home record. The process is simple; just select the home in the drop down menu.
-Land Line – Enter the phone number (optional) as you want it displayed, e.g. (123) 555-1212, or 123-555-1212.
-General Custom Field 1 – (in this example “Children”) Enter a value (optional) corresponding to the field definition that you have established. See page 7 for more information.
-General Custom Field 2 – (in this example “Pets”) Enter a value (optional) corresponding to the field definition that you have established. See page 7 for more information.
-Entry 1 Information:
-Entry Type – Select “Non-owner Resident” for renters; select “Non-Resident Owner” for those owners that do not live at the property (typically, Landlords); select “Resident Owner” for owners who do live at the property (this is the most common designation). When you select “Non-resident Owner” new fields will be displayed for entry of the out-of-community address as shown in the example screen on the prior page. You should fill in these fields manually.
-User ID – If User IDs for residents at this Home address have already been established in the User record, you can locate the User ID for this person by using the drop down menu button. This is especially important in Entry 1 because it allows that person to modify their directory entry from the directory display, using the “Your Entry” button.
-Name – Enter the name of the resident in the appropriate name fields. The directory will display it exactly as entered so you should enter them with leading capital letters (e.g. “George” – not “george”).
-Date of Birth – Enter the date of birth (optionally) in the yyyy-mm-dd format. Alternatively, you click on the small calendar icon and navigate to the date of birth by using the year 􀃅 and month 􀃅 links at the top of the display.
-Phone – If you need to enter an additional phone number, enter it (optionally) here. Enter it as you want it displayed, e.g. (123) 555-1212, or 123-555-1212. If you have given the user the option, they can remove the phone number – or update it – in their directory record.
-Email Address – Enter the email address (optionally) here. Pay attention to the case of the address – some email services are case sensitive. If you have given the user the option, they can remove the email address – or update it – in their directory record. Email addresses on the directory display page become email links, allowing residents to communicate with each other conveniently.
-Per Entry Custom Field 1 – (in this example, Cell Phone Number); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.
-Per Entry Custom Field 2 – (in this example, not set up); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.
-When you have completed the information in this section, select “Save and stay here.” When you do that, new field are available for entry of additional residents.
-Resident Directory Maintenance Site Administrator’s Guide
-Page 4 of 8
-Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
-Rev Jan 2008
-Entry 2 Information
-These additional entry sections are used to record the information for other residents at this address. Typically, Entry 2 Information is used for a spouse, significant other, or co-owner. Entries 3 and beyond can be used for children, mothers-in-laws, etc. depending on your requirements. The information in these sections is entirely optional. Only the first two entries will be displayed on the web site’s directory screen. Others can be displayed by selecting the “detailed listing” option.
-Entry Type – Select “Non-owner Resident” for renters; select “Non-Resident Owner” for those owners that do not live at the property (typically, Landlords); select “Resident Owner” for owners who do live at the property (this is the most common designation). When you select “Non-resident Owner” new fields will be displayed for entry of the out-of-community address as shown in the example screen on the prior page. You should fill in these fields manually.
-User ID – If User IDs for residents at this Home address have already been established in the User record, you can locate the User ID for this person by using the drop down menu button.
-Name – Enter the name of the resident in the appropriate name fields. The directory will display it exactly as entered so you should enter them with leading capital letters (e.g. “Linda” – not “linda”).
-Date of Birth – Enter the date of birth (optionally) in the yyyy-mm-dd format. Alternatively, you click on the small calendar icon and navigate to the date of birth by using the year 􀃅 and month 􀃅 links at the top of the display.
-Resident Directory Maintenance Site Administrator’s Guide
-Page 5 of 8
-Copyright Nord Enterprises and Connecting Folks 2004-2008 Please do not duplicate without permission
-Rev Jan 2008
-Phone – If you need to enter an additional phone number, enter it (optionally) here. Enter it as you want it displayed, e.g. (123) 555-1212, or 123-555-1212. If you have given the user the option, they can remove the phone number – or update it – in their directory record.
-Email Address – Enter the email address (optionally) here. Pay attention to the case of the address – some email services are case sensitive. If you have given the user the option, they can remove the email address – or update it – in their directory record. Email addresses on the directory display page become email links, allowing residents to communicate with each other conveniently.
-Per Entry Custom Field 1 – (in this example, Cell Phone Number); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.
-When you have completed the information in this section, select “Save and stay here.” When you do that, new fields become available for entry of additional residents. If later you want to delete the information in one of the sections, simple select the “Delete Entry #” button on the left side.
+		<p>To edit or create an entry, click the 'manage' link for the owner/resident directory on the main features screen.  You'll see a listing of any existing entries.  There is also a link to create a new entry.  Click that if you want to create a brand new directory entry.</p>
+		<img src="HelpImages/Directory/mainmanagedirectory.jpg" alt="Manage Directory Entries" />
+		<p>The alphabetical last name letter listing is the default view, but there are two other views available by selecting the links at the top. You can display a listing of all residents in alphabetical sequence by selecting “Manage All Directory Entries” or you can display a listing of all streets by selecting “Go to Entries by Street List”.</p>
+		<p>From any of the views, locate the specific directory entry that you want to modify and select “edit” for that record. The screen below is the top portion of the directory maintenance screen.</p>
+		<img src="HelpImages/Directory/directorymanageentrytop.jpg" alt="Manage - Top" />
+		<p><strong>Home</strong> – By definition, entries in the residents directory are residents or non-resident owners of property in the community and each entry defines a single property. For owners, all entries should be attached to a home record. The process is simple; just select the home in the drop down menu.  If you don't see the home in the list, there are two possible options: You've already created a listing for this address, or you haven't created the home record yet (done via the 'homes' tab on the admin panel's main left hand menu).</p>
+		<p><strong>Land Line</strong> – Enter the phone number (optional) as you want it displayed, e.g. (123) 555-1212, or 123-555-1212.</p>
+		<p><strong>General Custom Field 1</strong> –  Enter a value (optional) corresponding to the field definition that you have established. Note that this, and all custom fields, will only appear if you've created a title for it on the main directory edit screen (see the 'Configuration' tag at left for details)</p>
+		<p><strong>General Custom Field 2</strong> – Enter a value (optional) corresponding to the field definition that you have established.</p>
+		<div class = 'subHead'>Entry 1 Information</div>
+		<p><strong>Entry Type</strong> – Select “Non-owner Resident” for renters; select “Non-Resident Owner” for those owners that do not live at the property (typically, Landlords); select “Resident Owner” for owners who do live at the property (this is the most common designation). When you select “Non-resident Owner” new fields will be displayed for entry of the out-of-community address as shown in the example screen on the prior page. You should fill in these fields manually.</p>
+		<p><strong>User ID</strong> – If User IDs for residents at this Home address have already been established in the User record, you can locate the User ID for this person by using the drop down menu button. This is especially important in Entry 1 because it allows that person to modify their directory entry from the directory display, using the “Your Entry” button.</p>
+		<p><strong>Name</strong> – Enter the name of the resident in the appropriate name fields. The directory will display it exactly as entered so you should enter them with leading capital letters (e.g. “George” – not “george”).</p>
+		<p><strong>Date of Birth</strong> – Enter the date of birth (optionally) in the yyyy-mm-dd format. Alternatively, you click on the small calendar icon and navigate to the date of birth by using the year 􀃅 and month 􀃅 links at the top of the display.</p>
+		<p><strong>Phone</strong> – If you need to enter an additional phone number, enter it (optionally) here. Enter it as you want it displayed, e.g. (123) 555-1212, or 123-555-1212. If you have given the user the option, they can remove the phone number – or update it – in their directory record.</p>
+		<p><strong>Email Address</strong> – Enter the email address (optionally) here. Pay attention to the case of the address – some email services are case sensitive. If you have given the user the option, they can remove the email address – or update it – in their directory record. Email addresses on the directory display page become email links, allowing residents to communicate with each other conveniently.</p>
+		<p>Per Entry Custom Field 1 – Enter a value (optionally) corresponding to the field definition that you have established. See the configuration tag at left for more information.</p>
+		<p><strong>Per Entry Custom Field 2</strong> – (in this example, not set up); Enter a value (optionally) corresponding to the field definition that you have established. See page 7 for more information.</p>
+		<p>When you have completed the information in this section, select “Save and stay here.” When you do that, new field are available for entry of additional residents.</p>
+		<div class = 'subHead'>Entry 2 Information</div>
+		<img src="HelpImages/Directory/directorymanageentrymid.jpg" alt="Manage - Middle Section" />
+		<p>These additional entry sections are used to record the information for other residents at this address. Typically, Entry 2 Information is used for a spouse, significant other, or co-owner. Entries 3 and beyond can be used for children, mothers-in-laws, etc. depending on your requirements. The information in these sections is entirely optional. Only the first two entries will be displayed on the web site’s directory screen. Others can be displayed by selecting the “detailed listing” option.</p>
+		<p><strong>Entry Type</strong> – Select “Non-owner Resident” for renters; select “Non-Resident Owner” for those owners that do not live at the property (typically, Landlords); select “Resident Owner” for owners who do live at the property (this is the most common designation). When you select “Non-resident Owner” new fields will be displayed for entry of the out-of-community address as shown in the example screen on the prior page. You should fill in these fields manually.</p>
+		<p><strong>User ID</strong> – If User IDs for residents at this Home address have already been established in the User record, you can locate the User ID for this person by using the drop down menu button.</p>
+		<p><strong>Name</strong> – Enter the name of the resident in the appropriate name fields. The directory will display it exactly as entered so you should enter them with leading capital letters (e.g. “Linda” – not “linda”).</p>
+		<p><strong>Date of Birth</strong> – Enter the date of birth (optionally) in the yyyy-mm-dd format. Alternatively, you click on the small calendar icon and navigate to the date of birth by using the year 􀃅 and month 􀃅 links at the top of the display.</p>
+		<p><strong>Phone</strong> – If you need to enter an additional phone number, enter it (optionally) here. Enter it as you want it displayed, e.g. (123) 555-1212, or 123-555-1212. If you have given the user the option, they can remove the phone number – or update it – in their directory record.</p>
+		<p><strong>Email Address</strong> – Enter the email address (optionally) here. Pay attention to the case of the address – some email services are case sensitive. If you have given the user the option, they can remove the email address – or update it – in their directory record. Email addresses on the directory display page become email links, allowing residents to communicate with each other conveniently.</p>
+		<p><strong>Per Entry Custom Field 1</strong> – Enter a value (optionally) corresponding to the field definition that you have established.</p>
+		<p>When you have completed the information in this section, select “Save and stay here.” When you do that, new fields become available for entry of additional residents. If later you want to delete the information in one of the sections, simple select the “Delete Entry #” button on the left side.</p>
+		<p>Click the 'Pictures' tag at left to see details on the final section of the edit screen- adding a picture to a directory listing.</p>
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(4)'>
 		<p>At the bottom of the screen when editing any individual directory entry, you'll see a section for adding/editing an image:</p>
@@ -130,5 +172,16 @@ When you have completed the information in this section, select “Save and stay
 		<p>For more information on managing picture sizes, please see the Prep tag in the <a href="helpImages.php">Images guide</a>.
 	</div>
 	<div class = 'panel' ng-show = 'directorypanel.isSelected(5)'>
+		<p>When your users log in to view the resident directory, they will see a screen similar to this:</p>
+		<img src="HelpImages/Directory/userinterfacemain.jpg" alt="Main User Interface" />
+		<p>This is the default listing of all directory entries.  The first 2 entries for each home will be shown.  Clicking on the main last name of any entry (or address, if you've sorted by address) will open the expanded view:</p>
+		<img src="HelpImages/Directory/userinterfaceexpanded.jpg" alt="Expanded Entry View" />
+		<p>This will show all info entered for this address including extra people, images, landline, etc.  You can click the 'back to listing' link in the bottom right to go back to the main view.</p>
+		<p>The directory also has some menu options (if you're using the vertical menu option, they'll be down the left as shown below, if you're using horizontal, they'll be across the top).</p>
+		<img src="HelpImages/Directory/userinterfacemenu.jpg" alt="Directory menu" />
+		<p>There are options for sorting (By Name, by Address).  The button titled Your Entry allows a user to edit their own entry.  Note that this capability depends on how you've set up your directory (you can prevent this access on your main directory edit screen).  Also, only the first person listed in a directory entry has the capability to edit the entry (to prevent different people overwriting one entry). The Contact and Manage links are for the feature admin (if you've assigned one).</p>
+		<p>There is also a search function</p>
+		<img src="HelpImages/Directory/userinterfacesearch.jpg" alt="Directory Search Function" />
+		<p>Enter the text you want to search and hit the enter key or search button.  When you're done, you can hit the 'reset' link (not shown) to go back to the main directory view.</p>
 	</div>
 </section>

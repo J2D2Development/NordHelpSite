@@ -119,6 +119,15 @@
 		};
 	});
 
+	//request forms directive
+	app.directive('rfPanels', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'rf-panels.html',
+			controllerAs: 'rfpanel'
+		};
+	});
+
 })();
 
 //make sure any reload takes user back to top of screen
