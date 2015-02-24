@@ -1,0 +1,65 @@
+<section>
+	<div class = 'leftMenu'>
+		<div class = 'leftMenuHeadline'>
+			<em>You are viewing the guide to working with User Groups<br />
+			<br />
+			Click any tag below to see more info</em>
+			<br />
+			<br />
+		</div>
+			<a href ng-click = 'ugpanel.selectTab(0, "General")'>
+				<li ng-class = "{active:ugpanel.isSelected(0)}">
+					General
+				</li>
+			</a>
+			<a href ng-click = 'ugpanel.selectTab(1, "Main Page Properties")'>
+				<li ng-class = "{active:ugpanel.isSelected(1)}">
+					Creation
+				</li>
+			</a>
+			<a href ng-click = 'ugpanel.selectTab(2, "Page Areas")'>
+				<li ng-class = "{active:ugpanel.isSelected(2)}">
+					Page Areas
+				</li>
+			</a>
+			<a href ng-click = 'ugpanel.selectTab(3, "Menu Items")'>
+				<li ng-class = "{active: ugpanel.isSelected(3)}">
+					Menu Items
+				</li>
+			</a>
+			<a href ng-click = 'ugpanel.selectTab(4, "Working with Images")'>
+				<li ng-class = "{active:ugpanel.isSelected(4)}">
+					Images
+				</li>
+			</a>
+			<a href ng-click = 'ugpanel.selectTab(5, "Formatting Toolbar")'>
+				<li ng-class = "{active: ugpanel.isSelected(5)}">
+					Formatting
+				</li>
+			</a>
+			<a href ng-click = 'ugpanel.selectTab(6, "Page Admin")'>
+				<li ng-class = "{active: ugpanel.isSelected(6)}">
+					Page Admin
+				</li>
+			</a>
+			<a href = 'helpHome.php'>
+				<li>Home</li>
+			</a>
+	</div>
+	<div class = 'mainContent'>
+		<h1>Working with User Groups: {{ugpanel.msg}}</h1>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(0)'>
+	</div>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(1)'>
+	</div>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(2)'>
+	</div>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(3)'>
+	</div>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(4)'>
+	</div>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(5)'>
+	</div>
+	<div class = 'panel' ng-show = 'ugpanel.isSelected(6)'>
+	</div>
+</section>

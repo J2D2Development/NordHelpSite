@@ -143,12 +143,14 @@
 						</div>
 					</div>
 				</a>
+				<a href="helpUsergroups.php">
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>User Groups</div>
-							Extended Package Only...
+							Create User Groups for email lists, feature/page access, and more (Extended Package Only).
 						</div>
 					</div>
+				</a>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Look n Feel</div>

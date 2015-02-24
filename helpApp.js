@@ -128,6 +128,15 @@
 		};
 	});
 
+	//user groups directive
+	app.directive('ugPanels', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'ug-panels.html',
+			controllerAs: 'ugpanel'
+		};
+	});
+
 })();
 
 //make sure any reload takes user back to top of screen
