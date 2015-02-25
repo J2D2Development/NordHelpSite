@@ -137,6 +137,15 @@
 		};
 	});
 
+	//survey/voting directive
+	app.directive('surveyPanels', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'survey-panels.html',
+			controllerAs: 'surveypanel'
+		};
+	});
+
 })();
 
 //make sure any reload takes user back to top of screen

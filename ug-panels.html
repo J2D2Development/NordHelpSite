@@ -12,34 +12,19 @@
 					General
 				</li>
 			</a>
-			<a href ng-click = 'ugpanel.selectTab(1, "Main Page Properties")'>
+			<a href ng-click = 'ugpanel.selectTab(1, "Building a Group")'>
 				<li ng-class = "{active:ugpanel.isSelected(1)}">
 					Creation
 				</li>
 			</a>
-			<a href ng-click = 'ugpanel.selectTab(2, "Page Areas")'>
+			<a href ng-click = 'ugpanel.selectTab(2, "Assign a Group")'>
 				<li ng-class = "{active:ugpanel.isSelected(2)}">
-					Page Areas
+					Assign
 				</li>
 			</a>
-			<a href ng-click = 'ugpanel.selectTab(3, "Menu Items")'>
+			<a href ng-click = 'ugpanel.selectTab(3, "Remove a user or delete a group")'>
 				<li ng-class = "{active: ugpanel.isSelected(3)}">
-					Menu Items
-				</li>
-			</a>
-			<a href ng-click = 'ugpanel.selectTab(4, "Working with Images")'>
-				<li ng-class = "{active:ugpanel.isSelected(4)}">
-					Images
-				</li>
-			</a>
-			<a href ng-click = 'ugpanel.selectTab(5, "Formatting Toolbar")'>
-				<li ng-class = "{active: ugpanel.isSelected(5)}">
-					Formatting
-				</li>
-			</a>
-			<a href ng-click = 'ugpanel.selectTab(6, "Page Admin")'>
-				<li ng-class = "{active: ugpanel.isSelected(6)}">
-					Page Admin
+					Deletion
 				</li>
 			</a>
 			<a href = 'helpHome.php'>
@@ -49,17 +34,39 @@
 	<div class = 'mainContent'>
 		<h1>Working with User Groups: {{ugpanel.msg}}</h1>
 	<div class = 'panel' ng-show = 'ugpanel.isSelected(0)'>
+	<p><strong>User Groups</strong> are a convenient way to communicate with community groups (e.g. the Board, the Social Committee, the Architectural Review Committee, etc.) as a group.</p>
+	<ul>
+		<li>User Groups can be assigned to Pages, making those pages accessible to only the members of the assigned group (See the Pages guide for more detail).</li>
+		<li>User Groups can be assigned to Request Forms, allowing the forms to be emailed to all members of the assigned groups (See the Request Form guide for more detail).</li>
+		<li>User Groups can be assigned to Documents, making those documents available to only members of the assigned group (See the Documents guide for more detail).</li>
+	</ul>
+	<img src="HelpImages/usergroups/groupslinks.jpg" alt="Main Manage Link" />
+	<p>If you are using the extended feature package option, you'll see the User Groups feature toward the bottom of the list on your features tab.  If it's disabled, just click the "Enable" link.</p>
 	</div>
 	<div class = 'panel' ng-show = 'ugpanel.isSelected(1)'>
+	<p>
+		<div class = 'subHead'>To Build a User Group</div>
+	Select “Manage” next to the User Groups features and you will see a screen similar to the one shown below. To add a new group, select “Create New User Group.”</p>
+	<img src="HelpImages/usergroups/mainmanage.jpg" alt="Main user group create" />
+	<p>Once you have made that selection, you will see a screen similar to the one shown below:</p>
+	<img src="HelpImages/usergroups/newusergroup.jpg" alt="Create a Group" />
+	<p><strong>Title:</strong> Enter a title for the group you are adding, e.g. “Board Members.”</p>
+	<p><strong>Group Users:</strong> Add all the users that make up this group by selecting them in the window at the bottom of the screen and clicking on the “Add new user(s)” button. You can add the users one-at-a-time, or in groups by highlighting the first one on the list, scrolling down to the last one and holding down the Shift key when you select it. Multiple non contiguous users may be selected by holding down the Ctrl key as you select each one.</p>
+	<p>When you have finished selecting the users, click on “Add new user(s)” then return to the top of the screen and select “Save and return”.</p>
 	</div>
 	<div class = 'panel' ng-show = 'ugpanel.isSelected(2)'>
+	<p>Once you've created a user group, you can assign it to any page or some features.  If you do, only the users in that group will be able to access that section of the site.</p>
+	<p>To get started, edit any page or feature (not all features can be assigned to a user group).  You'll have to set the "require user authentication" option to "yes" to enable the user groups option.  Then, you'll be able to use the group selection box</p>
+	<img src="HelpImages/usergroups/groupassign.jpg" alt="Assign a user group" />
+	<p>Once you've chosen the group(s) to assign, click the "Add New user group(s) button and you're all set.</p>
 	</div>
 	<div class = 'panel' ng-show = 'ugpanel.isSelected(3)'>
-	</div>
-	<div class = 'panel' ng-show = 'ugpanel.isSelected(4)'>
-	</div>
-	<div class = 'panel' ng-show = 'ugpanel.isSelected(5)'>
-	</div>
-	<div class = 'panel' ng-show = 'ugpanel.isSelected(6)'>
+	<p><div class="subHead">Deleting a User from a Group</div>
+	To remove a user from a group, check the box next to their name and select “Remove selected user(s).”</p>
+	<img src="HelpImages/usergroups/removeusers.jpg" alt="Remove a user from a group" />
+	<p><div class="subHead">Deleting a User Group</div>
+	You can delete entire User Groups as long as they are not in use on a page, on a document, or on a request form. The “Delete” option will not be available as long as the group is in use as shown on the screen below.</p>
+	<p>To delete an unused Group, select “Delete” on the User Group Listing screen next to the group you want to delete. You will see a screen like the one below. Select the “Confirm Delete” button if you are sure.</p>
+	<img src="HelpImages/usergroups/deletegroup.jpg" alt="Delete an unused group" />
 	</div>
 </section>

@@ -151,12 +151,14 @@
 						</div>
 					</div>
 				</a>
+				<a href="helpSurveys.php">
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
-							<div class = 'buttonTitle'>Look n Feel</div>
-							Coming Soon!
+							<div class = 'buttonTitle'>Surveys/Voting</div>
+							Create simple surveys, or full featured online votes with write in options.
 						</div>
 					</div>
+				</a>
 			</div>
 		</div>
 <!--End of row 3-->
@@ -166,7 +168,7 @@
 			<div class = 'helpHomeRow'>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
-							<div class = 'buttonTitle'>Surveys/Voting</div>
+							<div class = 'buttonTitle'>Look n Feel</div>
 							Coming Soon!
 						</div>
 					</div>

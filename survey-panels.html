@@ -1,0 +1,65 @@
+<section>
+	<div class = 'leftMenu'>
+		<div class = 'leftMenuHeadline'>
+			<em>You are viewing the guide to working with Surveys/Voting<br />
+			<br />
+			Click any tag below to see more info</em>
+			<br />
+			<br />
+		</div>
+			<a href ng-click = 'surveypanel.selectTab(0, "General")'>
+				<li ng-class = "{active:surveypanel.isSelected(0)}">
+					General
+				</li>
+			</a>
+			<a href ng-click = 'surveypanel.selectTab(1, "Main Page Properties")'>
+				<li ng-class = "{active:surveypanel.isSelected(1)}">
+					Creation
+				</li>
+			</a>
+			<a href ng-click = 'surveypanel.selectTab(2, "Page Areas")'>
+				<li ng-class = "{active:surveypanel.isSelected(2)}">
+					Page Areas
+				</li>
+			</a>
+			<a href ng-click = 'surveypanel.selectTab(3, "Menu Items")'>
+				<li ng-class = "{active: surveypanel.isSelected(3)}">
+					Menu Items
+				</li>
+			</a>
+			<a href ng-click = 'surveypanel.selectTab(4, "Working with Images")'>
+				<li ng-class = "{active:surveypanel.isSelected(4)}">
+					Images
+				</li>
+			</a>
+			<a href ng-click = 'surveypanel.selectTab(5, "Formatting Toolbar")'>
+				<li ng-class = "{active: surveypanel.isSelected(5)}">
+					Formatting
+				</li>
+			</a>
+			<a href ng-click = 'surveypanel.selectTab(6, "Page Admin")'>
+				<li ng-class = "{active: surveypanel.isSelected(6)}">
+					Page Admin
+				</li>
+			</a>
+			<a href = 'helpHome.php'>
+				<li>Home</li>
+			</a>
+	</div>
+	<div class = 'mainContent'>
+		<h1>Working with Voting: {{surveypanel.msg}}</h1>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(0)'>
+	</div>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(1)'>
+	</div>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(2)'>
+	</div>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(3)'>
+	</div>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(4)'>
+	</div>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(5)'>
+	</div>
+	<div class = 'panel' ng-show = 'surveypanel.isSelected(6)'>
+	</div>
+</section>
