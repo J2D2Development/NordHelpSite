@@ -1,0 +1,105 @@
+<section>
+	<div class = 'leftMenu'>
+		<div class = 'leftMenuHeadline'>
+			<em>You are viewing the guide to working with the Look and Feel<br />
+			<br />
+			Click any tag below to see more info</em>
+			<br />
+			<br />
+		</div>
+			<a href ng-click = 'lnfpanel.selectTab(0, "General")'>
+				<li ng-class = "{active:lnfpanel.isSelected(0)}">
+					General
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(1, "Configuring the Basics")'>
+				<li ng-class = "{active:lnfpanel.isSelected(1)}">
+					Basics
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(2, "Page and Logo")'>
+				<li ng-class = "{active:lnfpanel.isSelected(2)}">
+					Page/Logo
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(3, "Header and Page Title Areas")'>
+				<li ng-class = "{active: lnfpanel.isSelected(3)}">
+					Header/Title
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(4, "The User Interface")'>
+				<li ng-class = "{active:lnfpanel.isSelected(4)}">
+					User View
+				</li>
+			</a>
+			<a href = 'helpHome.php'>
+				<li>Home</li>
+			</a>
+	</div>
+	<div class = 'mainContent'>
+		<h1>Working with LnF: {{lnfpanel.msg}}</h1>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(0)'>
+		<p>Your web page is divided into six (6) distinct look and feel areas, all of which can be modified to achieve just the look you want for your site. While not a specific area of the page, there is a 7th section to the Look-n-Feel panel that is used to control the display of background images.</p>
+		<p>You have control over the colors, the fonts, the buttons, and the images. A complete list of all available colors is available by selecting “View Color Samples” on the “Customize the Look-n-Feel” screen.  Or, just select one and hover over the color code entry box- a pop up will show you the color you selected.</p>
+		<p>Don't worry about "playing" with the look and feel of your site, as long as you don't publish, you can use the "Confirm Restore" option - accessible by selecting the "Publish" button on the left side of the main admin panel - to revert the site to the most recent published version.</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(1)'>
+		<p>The first screen when you click the look n feel tab gives you some basic options</p>
+		<img src="HelpImages/looknfeel/lnfbasic.jpg" alt="LnF - Basics" />
+		<p><strong>Navigation Orientation</strong> - Menu Items (buttons) can be displayed Horizontally in the Header section of the site or vertically. Make that selection here and then fine tune it in the main lnf section</p>
+		<p><strong>Customize Look-n-Feel</strong> When you select the “Customize Look-n-Feel” option on the initial screen, you will see a screen showing each of the sections that can be modified. Don’t be afraid to experiment - you can always reset all color values to the original defaults by selecting “Reset all Values to Original Default” on the “Customize Look-n-feel” page.</p>
+		<p>However, For many of us it's hard to decide on an appropriate look, color scheme, and navigation style for the site. If you would like to use a template (colors, fonts, and menu items) to get you started or a scheme developed by another admin, select <strong>“Choose a Look-n-Feel Option.”</strong> When you are ready to modify the Look-n-Feel, select “Customize Look-n-Feel.” You can also select a template and modify it later - an excellent way to get going quickly.</p>
+		<p>When you select “Choose a look-n-Feel Option” you will see a screen similar to the abbreviated one shown here.</p>
+		<img src="HelpImages/looknfeel/lnftemplates.jpg" alt="LnF - templates" />
+		<p>The Look-n-Feel Template Options are divided into three types:
+		<ul>
+		<li>1. Global Options - Professionally developed templates, including a header graphic. For new users, we recommend you select one of these templates as your starting point.</li>
+		<li>2. My Options – Templates that you have developed and saved. These do not include any graphics. It is a good idea to save your template so that you can restore the site to its saved state – especially useful when you change the site to reflect holiday themes.</li>
+		<li>3. Shared Options – Templates developed by other admins. If you would like to share your template with other customers, use the “Save current L-n-F as a template” link at the top of the “Customize Look-n-Feel” page and in “Template Group” select “Shared Options.”</li>
+		</ul></p>
+		<p><strong>Logo Properties:</strong> (on the Look-n-Feel Options panel).  If you want to use a logo on the site, you have two options:
+		<ul>
+		<li>1) You can select the "Alpha Numeric Logo" option and then decide which type you want - the rotating letter logo ( you select the letter from the drop down menu) or the fixed character logo (you enter the letter or number in the "Enter The Alpha or Numeric Character" entry box.</li>
+		<li>2) If you have a logo that you would like to upload to the pictures folder, this is a convenient way to do it. It not only uploads the graphic, it puts it in place for you. If you don’t have a logo, just leave it blank. To upload your logo, select the "Graphic Logo" option, then the “Browse” button, locate the logo on your local PC, and select “Save.” If you have already uploaded the logo to your picture folder, you can select it in the drop down.</li>
+		</ul>
+		Note that if you use your own logo, the best sizing is 150 pixels by 150 pixels.  We can assist with sizing images if necessary.</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(2)'>
+		<p>Page properties are the attributes you assign to all page backgrounds on the site (note: this does not affect the page area backgrounds- for that, go to the content area properties section). To create your own look and feel, first select a background color. You can choose from a list of colors or enter a color value in RGB format (#nnnnnn). If you are using vertical menus, we suggest that you leave the margins set at zero or a very small value of 5 or 10 pixels and make sure the background color is not the same color as the header, logo, or menu areas. Select “Save”. If you are using horizontal menus, the margins can be increased to show more page area on the screen. The size is in pixels and 150 pixels is equivalent to about 1 inch on the screen.</p>
+		<img src="HelpImages/looknfeel/lnfpage-logo.jpg" alt="Page/Logo editing" />
+		<p>It you want to use a logo on the site, you have two options:
+		<ol>
+		<li>You can select the "Alpha Numeric Logo" option and then decide which type you want - the rotating letter logo (you select the letter from the drop down menu) or the fixed character logo (you enter the letter or number in the "Enter The Alpha or Numeric Character" entry box.</li>
+		<li>If you have a logo that you would like to upload to the pictures folder, this is a convenient way to do it. It not only uploads the graphic, but also puts it in place for you. If you don’t have a logo, just leave it blank. To upload your logo, select the "Graphic Logo" option, then the “Browse” button, locate the logo on your local PC, and select “Save.” If you have already uploaded the logo to your picture folder, you can select it in the drop down. Your logo should be 150 pixels by 150 pixels or smaller.</li>
+		</ol>
+		You can also define the background color for the logo area here. Use the drop-down to select a color by name or enter an RGB value (format: #nnnnnn) to use an exact color. Select “Save” to save your choices - it is a good idea to "save" each section as you complete the changes.</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(3)'>
+		<p><div class="subHead">The header is the area of your web page located at the top of the screen.</div></p>
+		<img src="HelpImages/looknfeel/lnfheader.jpg" alt="LnF - header" />
+		<strong>Header Source:</strong> Use this option to choose the header type that your want. The header can be a graphical header (picture or other graphic), or a text header (text below). If you choose a graphical header, you must upload the image to the pictures folder before you can select it. Notice that some of the options below are unavailable when you choose a graphical header.</p>
+		<p><strong>Horizontal Justification:</strong> Use this option to determine the horizontal placement of your text or image on the header.</p>
+		<p><strong>Vertical Justification:</strong> Use this option to determine the vertical placement of your text or image.</p>
+		<p><strong>Background Color:</strong> Use this option to define the color of the header (text) or the background color (graphics). You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Header Font:</strong> Use this option to define the specific font (face) you want. We strongly recommend using a common font (Arial, Verdana, etc.).</p>
+		<p><strong>Header Font Color:</strong> Use this option to determine the color of the font that is used to display text in the header. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Header Text:</strong> Use this option to enter the text you would like to appear in the header.</p>
+		<p><strong>Header Image File:</strong> Use this drop down to select a previously uploaded picture.</p>
+		<p><strong>Help Text Status:</strong> See the menu properties section to change this option.</p>
+		<p><strong>Help Text Background Color:</strong> If the Help text is enabled, use this option to determine the background color of the text area. The font text color is a default black.</p>
+		<hr />
+		<p><div class="subHead">The Page Title bar appears just below the header and above the content area.</div>
+		The preview area will automatically update when you make changes to the font and color options.</p>
+		<img src="HelpImages/looknfeel/lnfpagetitle.jpg" alt="LnF - Page Title" />
+		<p><strong>Font:</strong> Use this option to define the specific font (face) you want.</p>
+		<p><strong>Font size:</strong> Use this option to define the specific font size you want.</p>
+		<p><strong>Font Color:</strong> Use this option to determine the color of the font that is used to display text in the header. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Background Color:</strong> Use this option to define the color of the Title bar. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(4)'>
+		<p>The user interface is shown below.  Your categories appear at the top (a category will only appear if it has at least one ad assigned to it).  You can click on a category to jump straight to that section.  Each ad is contained in its own outline, with headline (the Title field from your creation screen) and main ad body.  If you've included the Additional Link option, you'll see a notice in the bottom right.</p>
+		<p>The background and text colors of the individual ads will automatically match the look n feel options you chose in that section.</p>
+		<p><em>Note that in the Service Directory feature, there will be one small addition.  A 'Created On' line of text will appear in the top right of each ad.  This doesn't appear in the Classifieds feature, so use whichever you prefer.</em></p>
+		<img src="HelpImages/Ads/adsuserview.jpg" alt="Ads User View" />
+	</div>
+</section>

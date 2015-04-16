@@ -39,7 +39,7 @@
 				<div class = 'bodyWrapperSubText'>
 					Scroll down to learn more about working with your site builder and its features.<br />
 					<br />
-					Many guides are now up and running. Check back soon as we will add a couple more each week.<br />
+					<strong>New addition:  <a class="plain" href="helpLnF.php">Look n Feel!</a></strong><br />
 					<br />
 					<em>Questions?  Contact us at custcare-director@nordenterprises.com</em>
 				</div>
@@ -166,12 +166,14 @@
 <!--Row 4 start-->
 		<div class = 'helpHomeRowWrapper'>
 			<div class = 'helpHomeRow'>
+				<a href="helpLnF.php">
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Look n Feel</div>
-							Coming Soon!
+							Change colors, layout, menu style and more!
 						</div>
 					</div>
+				</a>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Photo Albums</div>
