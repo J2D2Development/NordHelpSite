@@ -69,6 +69,15 @@ body {
 	background-color: #ACD7D2;
 	color: #000000;
 }
+a.plain {
+	background-color: none;
+	color: #046380;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+a.plain:hover {
+	text-decoration: underline;
+}
 .headerHome {
 	background-color: #dbe8e5;
 	background-image: url('HelpImages/hoa_website_header_75.jpg');
@@ -128,7 +137,7 @@ body {
 	margin: 0px auto;
 	text-align: center;
 }
-.bodyWrapperText a {
+/*.bodyWrapperText a {
 	background-color: #3b7d75;
 	color: #ffffff;
 	padding: 3px;
@@ -139,7 +148,7 @@ body {
 .bodyWrapperText a:hover {
 	background-color: #ACD7D2;
 	color: #000000;
-}
+}*/
 .bodyWrapperTextHeader {
 	font-family: 'Great Vibes', cursive;
 	font-size: 42pt;

@@ -146,6 +146,14 @@
 		};
 	});
 
+	app.directive('lnfPanels', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'lnf-panels.html',
+			controllerAs: 'lnfpanel'
+		};
+	});
+
 })();
 
 //make sure any reload takes user back to top of screen
