@@ -27,9 +27,24 @@
 					Header/Title
 				</li>
 			</a>
-			<a href ng-click = 'lnfpanel.selectTab(4, "The User Interface")'>
+			<a href ng-click = 'lnfpanel.selectTab(4, "Horizontal Menu Properties")'>
 				<li ng-class = "{active:lnfpanel.isSelected(4)}">
-					User View
+					Menu - Horizontal
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(5, "Vertical Menu Properties")'>
+				<li ng-class = "{active:lnfpanel.isSelected(5)}">
+					Menu - Vertical
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(6, "Content Area Properties")'>
+				<li ng-class = "{active:lnfpanel.isSelected(6)}">
+					Page Areas
+				</li>
+			</a>
+			<a href ng-click = 'lnfpanel.selectTab(7, "Background Image")'>
+				<li ng-class = "{active:lnfpanel.isSelected(7)}">
+					Bk Image
 				</li>
 			</a>
 			<a href = 'helpHome.php'>
@@ -42,6 +57,7 @@
 		<p>Your web page is divided into six (6) distinct look and feel areas, all of which can be modified to achieve just the look you want for your site. While not a specific area of the page, there is a 7th section to the Look-n-Feel panel that is used to control the display of background images.</p>
 		<p>You have control over the colors, the fonts, the buttons, and the images. A complete list of all available colors is available by selecting “View Color Samples” on the “Customize the Look-n-Feel” screen.  Or, just select one and hover over the color code entry box- a pop up will show you the color you selected.</p>
 		<p>Don't worry about "playing" with the look and feel of your site, as long as you don't publish, you can use the "Confirm Restore" option - accessible by selecting the "Publish" button on the left side of the main admin panel - to revert the site to the most recent published version.</p>
+		<p><em>When you've saved changes to the look-n-feel section, click the 'open preview window' link in the upper right corner of your admin panel screen to check out how they look.</em></p>
 	</div>
 	<div class = 'panel' ng-show = 'lnfpanel.isSelected(1)'>
 		<p>The first screen when you click the look n feel tab gives you some basic options</p>
@@ -97,9 +113,67 @@
 		<p><strong>Background Color:</strong> Use this option to define the color of the Title bar. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
 	</div>
 	<div class = 'panel' ng-show = 'lnfpanel.isSelected(4)'>
-		<p>The user interface is shown below.  Your categories appear at the top (a category will only appear if it has at least one ad assigned to it).  You can click on a category to jump straight to that section.  Each ad is contained in its own outline, with headline (the Title field from your creation screen) and main ad body.  If you've included the Additional Link option, you'll see a notice in the bottom right.</p>
-		<p>The background and text colors of the individual ads will automatically match the look n feel options you chose in that section.</p>
-		<p><em>Note that in the Service Directory feature, there will be one small addition.  A 'Created On' line of text will appear in the top right of each ad.  This doesn't appear in the Classifieds feature, so use whichever you prefer.</em></p>
-		<img src="HelpImages/Ads/adsuserview.jpg" alt="Ads User View" />
+		<p><div class="subHead">Horizontal Menu Options</div></p>
+		<p>The options available on this panel depend on several selections. If you chose Horizontal Menus on the initial screen, you will see a panel similar to the one below. You define the appearance of the menus on this screen, but the text on the buttons is system generated from the list of menu items on your home page. The sub menu items are generated from the menu items linked to the pages defined by the buttons on the home page.</p>
+		<p>There are advantages and drawbacks to this layout.  The advantage is a simpler to maintain, cleaner navigation.  Each page on the site will have the same menu- itmes will drop down to display options for pages linked from the homepage.  The drawback is that it doesn't allow for a whole lot of flexibility- if you need to create a lot of sub pages, you might find it restrictive.</p>
+		<p>Horizontal Menu Considerations:
+		<ul>
+		<li>The menu item text on the horizontal menu is generated automatically from the menu items on the home page. The text for the sub-menus is also generated automatically from the menu items on each of the pages linked to the home page.</li>
+		<li>If you are using menu items at the 3rd (or deeper) level, you should convert them to text links using the "Insert Link" button on the editor's tool bar. As an example, if you have "Home Page --> Association --> Documents --> specific documents" as the menu items, you should add text links to the specific documents on the "Documents" page.</li>
+		<li>Try to keep the number of menu items on your home page to a minimum. While the menus will automatically wrap to a second line, that is not very cosmetically appealing.</li>
+		<li>The Page Properties section of the Look-n-Feel panel can now play an important part in the cosmetics of your site. Try increasing the left and right margins to 100 or 150 pixels.</li>
+		<li>With horizontal menus, logos are integrated into the header area</li>
+		</ul>
+		</p>
+		<img src="HelpImages/looknfeel/lnfmenu-horiztop.jpg" alt="Horizontal Menu - Top" />
+		<p><strong>Menu Vertical Position:</strong> This option is used to define where the menu should appear - at the top of the header or the bottom.</p>
+		<p><strong>Menu Horizontal Position:</strong> This option is used to define the horizontal justification - on the left, in the center, or on the right.</p>
+		<p><strong>Font:</strong> This option defines the specific font (face) the system will use.</p>
+		<p><strong>Font Size:</strong> This option is used to control the size of the font. Select Small (8pt), Medium (10pt), or Large (12pt).</p>
+		<p><strong>Menu Row Background Color:</strong> This option defines the background color of the "bar" that contains the menu. Usually, it will be set to the color of the Title Bar or the color of the menu background. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Menu Background Color:</strong> This option is used to define the color of the background for your horizontal buttons. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Menu Font Color:</strong> This option control the color of the text on the buttons and should provide a contrast to the background color. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Sub Menu Background Color:</strong> This option is used to define the background color of any sub menu items. It should be different than the main item background color to provide a visual clue that it is a sub. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Sub Menu Font Color:</strong> This option controls the color of the text on the sub menu items and should provide a contrast from the sub menu background color. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Rollover Background Color:</strong> This option is used to define the background color that the user will see when they move their mouse over the button. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Rollover Font Color:</strong> This option is used to define the font color that the user will see when they move their mouse over the button. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<img src="HelpImages/looknfeel/lnfmenu-horizbottom.jpg" alt="Horizontal Menu - Bottom" />
+		<p><strong>Include Global Buttons:</strong> This option is used to control the display of the global (same everywhere) buttons "back" and "home." Select either, both or none.</p>
+		<p><strong>Global Button Positioning:</strong> This option defines where the global button(s) should appear - at the beginning (front) of the menu or at the end.</p>
+		<p><strong>Powered By Color:</strong> This option allows you to control the font color of the “Powered by Nord Enterprises” link located at the bottom of the screen. If you have enrolled in the enhanced features option package, it can be set to the same color as the menu item background color, effectively making it invisible. If you are using the basic option package, the menu items background color and the “Powered By Color” selection cannot be the same color.</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(5)'>
+		<p><div class="subHead">Vertical Menu Options</div></p>
+		<p>If you chose Vertical Menus on the initial screen, you'll have some options for menu background.  You can choose 'Graphical' to choose from our image based backgrounds.  Or you can choose one of two Color Tile options.  These don't rely on a fixed background image, so are much more flexible with regard to color scheme as well as size of menu item text.</p>
+		<img src="HelpImages/looknfeel/lnfmenu-vert.jpg" alt="Menu Options - Vertical" />
+		<p><em>Note: The Menu Preview section will update as you make selections to the different fields.  This will let you find a good color scheme.  Hover over the preview button to see the hover effect/color change.</em></p>
+		<p><strong>Font:</strong> This option defines the specific font (face) the system will use.</p>
+		<p><strong>Font Size:</strong> This option is used to control the size of the font. Select Small (8pt), Medium (10pt), or Large (12pt).</p>
+		<p><strong>Menu Background Color:</strong> This option defines the background color of the menu area - the left side of the site. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Menu Font Color:</strong> This option defines the color of the text on the button and should provide a contrast to the background color. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Include Global Buttons:</strong> This option is used to control the display of the global (same everywhere) buttons "back" and "home." Select either, both or none.</p>
+		<p><strong>Global Button Positioning:</strong> This option defines where the global buttons should appear - at the beginning (front) of the menu or at the end.</p>
+		<p><strong>Button Label Position:</strong> Allows you to control the alignment of your button text- left, center, or right.</p>
+		<p><strong>Powered By Color:</strong> This option allows you to control the font color of the “Powered by Nord Enterprises” link located at the bottom of the screen. If you have enrolled in the enhanced features option package, it can be set to the same color as the menu item background color, effectively making it invisible. If you are using the basic option package, the menu items background color and the “Powered By Color” selection cannot be the same color.</p>
+		<p><strong>Help Text Status:</strong> This option is used to enable or disable the display of the hover (help) test that a user sees when they hover their mouse over their mouse over the buttons.</p>
+		<p><strong>Help Text Background Color:</strong> This option defines the background color of the hover (help) and is only available if the "enable" option has been selected. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(6)'>
+		<p><div class="subHead">The content area is the main area of your pages.</div>
+		<img src="HelpImages/looknfeel/lnfcontentarea.jpg" alt="Content Area Properties" />
+		<p><strong>Font:</strong> Use this option to define the specific font (face) you want.</p>
+		<p><strong>Font Size:</strong> Choose the font size you want for your page areas.  Note that if you've changed the font size in an individual page area (using the formatting toolbar), that will override this global font size.</p>
+		<p><strong>Font Color:</strong> Use this option to determine the color of the font that is used to display text on the pages. You can choose from a list of colors by using the drop down or enter a specific color by entering its RGB value (format #nnnnnn).</p>
+		<p><strong>Background Color:</strong> Use this option to define the color of the content area. The font and the background color should provide good contrast. You can choose from a list of colors by using the drop down or enter a specific</p>
+	</div>
+	<div class = 'panel' ng-show = 'lnfpanel.isSelected(7)'>
+		<p><div class="subHead">This section is used to control the display of a background image.</div> The image may be previously uploaded or uploaded here.</p>
+		<img src="HelpImages/looknfeel/lnfbackground-image.jpg" alt="Background Image" />
+		<p><strong>Apply Background Image to:</strong> Use this option to control whether the image is positioned on the page background or on the pages themselves in the content area.</p>
+		<p><strong>Background Image:</strong> Use this section to select or upload an image.</p>
+		<p><strong>Repeat Background Image:</strong> This option is used to control whether the image should appear once (No) or be repeated as needed to fill the area (Yes).</p>
+		<p><strong>Background Image Vertical Position:</strong> If the repeat option is "no" you can use this option to position the image vertically. This is most effective on a page content image.</p>
+		<p><strong>Background Image Horizontal Position:</strong> If the repeat option is "no" you can use this option to position the image horizontally. This is most effective on a page content image.</p>
+		<p><em>Be sure to select "Save" when you have finished making changes.</em></p>
 	</div>
 </section>
