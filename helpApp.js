@@ -154,6 +154,14 @@
 		};
 	});
 
+	app.directive('rkPanels', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'rk-panels.html',
+			controllerAs: 'rkpanel'
+		};
+	});
+
 })();
 
 //make sure any reload takes user back to top of screen
