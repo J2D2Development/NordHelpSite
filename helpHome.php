@@ -174,6 +174,14 @@
 						</div>
 					</div>
 				</a>
+				<a href="helpRecordkeeping.php">
+					<div class = 'helpHomeButtonWrapper'>
+						<div class = 'helpHomeButton'>
+							<div class = 'buttonTitle'>Recordkeeping</div>
+							Track community information, keep board notes, and more...
+						</div>
+					</div>
+				</a>
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Photo Albums</div>
@@ -183,12 +191,6 @@
 					<div class = 'helpHomeButtonWrapper'>
 						<div class = 'helpHomeButton'>
 							<div class = 'buttonTitle'>Reservations</div>
-							Coming Soon!
-						</div>
-					</div>
-					<div class = 'helpHomeButtonWrapper'>
-						<div class = 'helpHomeButton'>
-							<div class = 'buttonTitle'>Recordkeeping</div>
 							Coming Soon!
 						</div>
 					</div>

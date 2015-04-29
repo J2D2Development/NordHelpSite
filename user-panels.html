@@ -17,29 +17,29 @@
 					Creation - Basics
 				</li>
 			</a>
-			<a href ng-click = 'userpanel.selectTab(2, "Creation - Admins")'>
+			<a href ng-click = 'userpanel.selectTab(2, "Home Assignment")'>
 				<li ng-class = "{active:userpanel.isSelected(2)}">
-					Creation - Admin
-				</li>
-			</a>
-			<a href ng-click = 'userpanel.selectTab(3, "Creation - Contacts")'>
-				<li ng-class = "{active: userpanel.isSelected(3)}">
-					Creation - Contacts
-				</li>
-			</a>
-			<a href ng-click = 'userpanel.selectTab(4, "Home Assignment Options")'>
-				<li ng-class = "{active:userpanel.isSelected(4)}">
 					Home Assignment
 				</li>
 			</a>
-			<a href ng-click = 'userpanel.selectTab(5, "Syncing the Resident Directory")'>
-				<li ng-class = "{active: userpanel.isSelected(5)}">
+			<a href ng-click = 'userpanel.selectTab(3, "Directory Sync")'>
+				<li ng-class = "{active: userpanel.isSelected(3)}">
 					Directory Sync
 				</li>
 			</a>
-			<a href ng-click = 'userpanel.selectTab(6, "Add to a Mailing List")'>
-				<li ng-class = "{active: userpanel.isSelected(6)}">
+			<a href ng-click = 'userpanel.selectTab(4, "Mailing List")'>
+				<li ng-class = "{active:userpanel.isSelected(4)}">
 					Mailing List
+				</li>
+			</a>
+			<a href ng-click = 'userpanel.selectTab(5, "Access Level")'>
+				<li ng-class = "{active: userpanel.isSelected(5)}">
+					Access Level
+				</li>
+			</a>
+			<a href ng-click = 'userpanel.selectTab(6, "Board/Committee Contacts")'>
+				<li ng-class = "{active: userpanel.isSelected(6)}">
+					Board Contacts
 				</li>
 			</a>
 			<a href ng-click = 'userpanel.selectTab(7, "Autogenerate Users")'>
@@ -63,40 +63,22 @@
 	</div>
 	<div class = 'panel' ng-show = 'userpanel.isSelected(1)'>
 		Once you've clicked to edit an existing user or create a new user, you'll see a new screen- the top section is below.
-		<img src="HelpImages/UserSection/usersgeneral.jpg" alt="Basic User Configuration" />
-		<strong>Name</strong> - Enter the name of the primary account holder. Enter the first name in the initial name field, tab to the next field and enter the last name. You should enter names with leading capital letters (e.g. “George,” not “george”).
-		<strong>Username</strong> - The Username will be created for you in the recommended format, last name plus first initial. You can change it while you are adding a new name, but for consistency we recommend that you do not. If you do change it, the user name you enter must be at least 2 characters long and each character must be either a number or a lowercase letter. Although the field will accept many different characters, automated processes limit the length to 10 characters. We suggest that directly entered user names also be limited to 10 characters as well for consistency. If you decide after the record has been created that you want a different username, you have to delete the record and create a new one.<br />
+		<img src="HelpImages/UserSection/usersbasicinfo.jpg" alt="Basic User Configuration" />
+		<strong>Name and Username</strong> - Enter the name of the primary account holder. Enter the first name in the initial name field, tab to the next field and enter the last name. You should enter names with leading capital letters (e.g. “George,” not “george”). The Username will be created for you in the recommended format, last name plus first initial. You can change it while you are adding a new name, but for consistency we recommend that you do not. If you do change it, the user name you enter must be at least 2 characters long and each character must be either a number or a lowercase letter. Although the field will accept many different characters, automated processes limit the length to 10 characters. We suggest that directly entered user names also be limited to 10 characters as well for consistency. If you decide after the record has been created that you want a different username, you have to delete the record and create a new one.<br />
 		<br />
 		<strong>Password</strong> - The Password fields are for the entry of an initial password – or a new temporary password when your user forgets their logon credentials. If you are not changing the password, leave the fields blank. If you are, enter a new, temporary password carefully in both fields. It does not matter what password you enter as long as the entries are a minimum of 5 and maximum of 10 characters long and match exactly.<br />
 		<em>Note: Passwords are case sensitive (i.e. “OneWinner” is not the same as “onewinner”).</em><br />
 		<br />
+		<strong>Contact Info</strong> - Enter the user's email address and phone number here.  Enter the user’s email address carefully. It is best to copy (ctrl/c) and paste it (ctrl/v) from the original request document if possible. If not, pay attention to the use of upper and lower case letters in the address – some services require exact matches.  The phone number field is a free form entry field, so you can enter the number in several different formats, e.g. 1235551212, or 123-555-1212, or (123) 555-1212. If you live in a community where there is only one area code and you do not need to dial 10 digits, simply enter the 7 digit number.<br />
+		<br />
 		<strong>Notification</strong> – This feature allows you to generate an automatic email message (assuming there is an email address in the record) which will notify the user of their logon credentials. You can customize this notification in the <a href = 'helpGeneral.php'>General tab</a> on your admin panel's main left hand menu.
 	</div>
 	<div class = 'panel' ng-show = 'userpanel.isSelected(2)'>
-		This is the second section of the main user account configuration screen.
-		<img src="HelpImages/UserSection/usersadmin.jpg" alt="Admin Setup Options">
-		<strong>Site Administrator</strong> - Any user may be assigned Site Administrator status, but your site can only have one Primary Administrator. The only difference between a Primary and a non- Primary administrator is that the email address on file (and required) for a Primary Administrator is used for all standard forms (User Id Requests and the Contact Site Administrator link at the bottom of every page).<br />
+		This is the second section of the main user account configuration screen.  Below are steps you'll see when you click to edit the home assignment options.  Click tags at left to work with other areas.
+		<img src="HelpImages/UserSection/usershomedir.jpg" alt="Home Assignment">
+		<em>Remember: The “edit” link for the Home Assignment Properties will appear after you enter and save the basic user information.</em><br />
 		<br />
-		<strong>Feature Administrator</strong> – Many of the site features allow you to share the work load of maintaining the information with another community volunteer, referred to as a feature administrator. By selecting “yes” you are simply making this name available for selection later for a specific feature. The actual assignment of a particular user to feature administration is done in the “Edit” section of the feature (Calendar, Ads, etc.).<br />
-		<br />
-		<strong>Page Administrator</strong> – Any page may be assigned to a specific user for maintenance. Selecting “yes” here simply makes their name available for assigning to the page (much like a feature administrator). You can also decide if their page maintenance privileges include the ability to add new pages to the site. The actual assignment of this user to a page is done on the Page itself.
-	</div>
-	<div class = 'panel' ng-show = 'userpanel.isSelected(3)'>
-		The 3rd section of the user configuration scren is below.
-		<img src="HelpImages/UserSection/userscontact.jpg" alt="Users contact info section" />
-		<strong>Board Member</strong> – If this user is a Board member, select “yes: and enter the title. This causes the information to be made available to the Association Government (link to guide coming soon!) feature.<br />
-		<br />
-		<strong>Officer/Official</strong> – If this user is another volunteer leader in the community (e.g. Committee Chair, Web Site Administrator, Management Company representative, etc.), select “yes” and enter the title. This causes the information to be made available to the “Association Government” feature. See the “Association Government” guide for more information.<br />
-		<br />
-		<strong>Phone Number</strong> – Enter the user’s phone number. If you live in a community that has more then one area code or requires 10 digit dialing, you should enter the full 10 digit number. It’s a free form entry field, so you can enter the number in several different formats, e.g. 1235551212, or 123-555-1212, or (123) 555-1212. If you live in a community where there is only one area code and you do not need to dial 10 digits, simply enter the 7 digit number.<br />
-		<br />
-		<strong>Email Address</strong> – Enter the user’s email address carefully. It is best to copy (ctrl/c) and paste it (ctrl/v) from the original request document if possible. If not, pay attention to the use of upper and lower case letters in the address – some services require exact matches.
-	</div>
-	<div class = 'panel' ng-show = 'userpanel.isSelected(4)'>
-		<img src="HelpImages/UserSection/homeassignmentlink.jpg" alt="Home Assignment Link" />
-		<em>Note: The “edit” link for the Home Assignment Properties will appear after you enter and save the basic user information.</em> Once you have entered the Email Address, scroll down and select “Save and stay here.” The option fields will then be available for editing. Since some of the Synchronization Options require a home assignment, enter the Home Assignment Properties first followed by the Synchronization Options/Mailing List Assignment Options.<br />
-		<br />
-		<strong>Home Assignment Properties</strong> – Select “Edit” and a screen similar to the one shown below will be displayed. This screen is used to define the type of record you are entering and the residence specific options.
+		<strong>Home Assignment Options</strong> – Select “Edit” and a screen similar to the one shown below will be displayed. This screen is used to define the type of record you are entering and the residence specific options.
 		<img src="HelpImages/UserSection/homeassignmentmain.jpg" alt="Home Assignment Screen" />
 		<strong>Account Type</strong> – Users can be residents of the community or other people who do not live in the community but need access to the secured areas of the site. Select “Property Resident or Owner” for community members and “Authorized User” for others.<br />
 		<br />
@@ -113,28 +95,42 @@
 		<br />
 		<strong>Online Payment Allowed</strong> - This option authorizes a user to use the online payment feature. “Resident owner” and “non-resident owner” accounts are eligible for Online Payment while non-owner resident accounts are not. It is not unusual that more than one resident at an address has their own account. In this case, only one user account per address will be allowed to submit an Online Payment.
 	</div>
-	<div class = 'panel' ng-show = 'userpanel.isSelected(5)'>
-		<em>Note: The “edit” link for the Synchronization Options will appear after you enter and save the basic user information.</em> Once you have entered the Email Address, scroll down and select “Save and stay here.” The option fields will then be available for editing. Since some of the Synchronization Options require a home assignment, enter the Home Assignment Properties first followed by the Synchronization Options/Mailing List Assignment Options.
+	<div class = 'panel' ng-show = 'userpanel.isSelected(3)'>
+		<div class="subHead">You can configure the directory display for this user account</div>
 		<img src="HelpImages/UserSection/userdirectorysynclink.jpg" alt="User - Directory Sync Link">
-		Select “Edit” to make changes to the synchronization configurations for this user. If you are creating a new user record, especially for a new resident, these options can save you quite a bit of work.<br />
+		Select “Edit” to make changes to the directory display settings for this user. If you are creating a new user record, especially for a new resident, these options can save you quite a bit of work.<br />
 		<br />
-		Remember: The “edit” link will appear after you save the basic information. When you select “edit” next to the “User Account/Resident Directory Entry Synchronization Options” link on the initial user page, you will see a screen similar to the one below.
+		Remember: The “edit” link will appear after you save the basic information. When you select “edit” next to the “Directory Update/Security” link on the initial user page, you will see a screen similar to the one below.
 		<img src="HelpImages/UserSection/userdirectorysyncmain.jpg" alt="User - Directory Sync Screen">
-		<strong>Phone number privacy synchronization</strong> – Select “yes” to suppress the display of the phone number on the Association Government and the web site Directory screens.<br />
+		<strong>Hide Phone Number</strong> – Select “yes” to suppress the display of the phone number on the Association Government and the web site Directory screens.<br />
 		<br />
-		<strong>Email address privacy synchronization</strong> – Select “yes” to suppress the display of the email address on the Association Government and web site Directory screens.<br />
+		<strong>Hide email Address</strong> – Select “yes” to suppress the display of the email address on the Association Government and web site Directory screens.<br />
 		<br />
-		<strong>Create Resident Directory Entry Info</strong> – Select “yes” if you would like the system to create a new directory record for this user. It only works if a “home” has been assigned. This is a convenient way to add the information to the directory – especially for new, move-in users.<br />
+		<strong>Create Resident Directory Entry</strong> – Select “yes” if you would like the system to create a new directory record for this user. It only works if a “home” has been assigned. This is a convenient way to add the information to the directory – especially for new, move-in users.<br />
 		<br />
-		<strong>Delete Resident Directory Entry Info</strong> – Select “yes” if you like the system to delete the old resident’s directory entry. Be careful! Any information in that record will be deleted. It is not an appropriate option for rental homes, but it is appropriate for a standard buy/sell.<br />
+		<strong>Delete Directory Entry</strong> – Select “yes” if you like the system to delete the old resident’s directory entry. Be careful! Any information in that record will be deleted. It is not an appropriate option for rental homes, but it is appropriate for a standard buy/sell.<br />
 		<br />
-		<strong>Update Resident Directory Entry Info</strong> – Select “yes” if you want the information you have entered here to simply update the information in the directory. Typically, this is used to update the email address and phone number for current residents.
+		<strong>Update Existing Directory Entry</strong> – Select “yes” if you want the information you have entered here to simply update the information in the directory. Typically, this is used to update the email address and phone number for current residents.
 	</div>
-	<div class = 'panel' ng-show = 'userpanel.isSelected(6)'>
+	<div class = 'panel' ng-show = 'userpanel.isSelected(4)'>
 		<em>Note: The “edit” link for the Mailing List Assignment Options will appear after you enter and save the basic user information.</em> Once you have entered the Email Address, scroll down and select “Save and stay here.” The option fields will then be available for editing. Since some of the Synchronization Options require a home assignment, enter the Home Assignment Properties first followed by the Synchronization Options/Mailing List Assignment Options.
 		<img src="HelpImages/UserSection/mailinglistlink.jpg" alt="User Mailing List Link">
 		Click the 'edit' link for the Mailing List Assignment Options line and you will have access to the screen below- you'll be able to add this user to any existing mailing list, or remove them from any list they're currently assigned to.
 		<img src="HelpImages/UserSection/mailinglistmain.jpg" alt="User Mailing List Assignment Screen">
+	</div>
+	<div class = 'panel' ng-show = 'userpanel.isSelected(5)'>
+		<img src="HelpImages/UserSection/usersadmin.jpg" alt="Admin Access Settings">
+		<strong>Site Administrator</strong> - Any user may be assigned Site Administrator status, but your site can only have one Primary Administrator. The only difference between a Primary and a non- Primary administrator is that the email address on file (and required) for a Primary Administrator is used for all standard forms (User Id Requests and the Contact Site Administrator link at the bottom of every page).<br />
+		<br />
+		<strong>Feature Administrator</strong> – Many of the site features allow you to share the work load of maintaining the information with another community volunteer, referred to as a feature administrator. By selecting “yes” you are simply making this name available for selection later for a specific feature. The actual assignment of a particular user to feature administration is done in the “Edit” section of the feature (Calendar, Ads, etc.).<br />
+		<br />
+		<strong>Page Administrator</strong> – Any page may be assigned to a specific user for maintenance. Selecting “yes” here simply makes their name available for assigning to the page (much like a feature administrator). You can also decide if their page maintenance privileges include the ability to add new pages to the site. The actual assignment of this user to a page is done on the Page itself.
+	</div>
+	<div class = 'panel' ng-show = 'userpanel.isSelected(6)'>
+		<img src="HelpImages/UserSection/usersboard.jpg" alt="Board/Committee contacts" />
+		<strong>Board Member</strong> – If this user is a Board member, select “yes: and enter the title. This causes the information to be made available to the Association Government (link to guide coming soon!) feature.<br />
+		<br />
+		<strong>Officer/Official</strong> – If this user is another volunteer leader in the community (e.g. Committee Chair, Web Site Administrator, Management Company representative, etc.), select “yes” and enter the title. This causes the information to be made available to the “Association Government” feature. See the “Association Government” guide for more information.
 	</div>
 	<div class = 'panel' ng-show = 'userpanel.isSelected(7)'>
 		<div class = 'subHead'>Auto Generation of User Records from Directory Records</div>
